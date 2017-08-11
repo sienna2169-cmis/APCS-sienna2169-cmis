@@ -10,6 +10,9 @@ public class Fundamentals
   public static void main(String[] args) {
     dataTypes();
     add(4, 5);
+    subtract(30, 5);
+    multiply(8, 7);
+    
     }
   public static void dataTypes() {
      byte a = 20;
@@ -96,9 +99,27 @@ public class Fundamentals
     int sum = intone + inttwo;
     System.out.println(sum);
     return sum;
-   
-
-      
+  
  }   
-
+   public static int subtract(int a, int b) {
+    int intone = a;
+    int inttwo = b;
+    int difference = intone - inttwo;
+    System.out.println(difference);
+    return difference;
+ }  
+    public static int multiply(int a, int b) {
+    int intone = a;
+    int inttwo = b;
+    int product = intone * inttwo;
+    System.out.println(product);
+    return product;
+ }  
+    public static int divide(int a, int b) {
+    int intone = a;
+    int inttwo = b;
+    int quotient = intone / inttwo;
+    System.out.println(quotient);
+    return quotient;
+ }  
 }
