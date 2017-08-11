@@ -1,18 +1,18 @@
 #BlueJ package file
 objectbench.height=76
-objectbench.width=774
-package.editor.height=271
-package.editor.width=648
-package.editor.x=0
+objectbench.width=619
+package.editor.height=334
+package.editor.width=493
+package.editor.x=-1
 package.editor.y=0
 package.numDependencies=0
 package.numTargets=1
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
-target1.editor.height=439
-target1.editor.width=1606
-target1.editor.x=-3
+target1.editor.height=562
+target1.editor.width=1280
+target1.editor.x=0
 target1.editor.y=437
 target1.height=50
 target1.name=Fundamentals

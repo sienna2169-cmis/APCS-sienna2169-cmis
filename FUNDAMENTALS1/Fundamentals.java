@@ -9,6 +9,7 @@ public class Fundamentals
 {
   public static void main(String[] args) {
     dataTypes();
+    add(4, 5);
     }
   public static void dataTypes() {
      byte a = 20;
@@ -87,10 +88,17 @@ public class Fundamentals
      + "Char is used to store any character. This means it can be used in lists, to represent individual letters, abbreviations, etc.";
      
      System.out.println(chartext);
-     
+     //WOOOOOO I'M DONE!!!
     } 
-    
+    public static int add(int a, int b) {
+    int intone = a;
+    int inttwo = b;
+    int sum = intone + inttwo;
+    System.out.println(sum);
+    return sum;
+   
 
       
  }   
 
+}
