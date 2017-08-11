@@ -8,22 +8,37 @@
 public class Fundamentals
 {
   public static void main(String[] args) {
+     int c2 = 4;
+     int c3 = 7;
+     int c4 = 12;
+     int c5 = 32;
+     int c6 = 9;
+     int c7 = 18;
+     int c8 = 55;
+     
+     // these are for the addition etc. methods
     dataTypes();
-    add(4, 5);
+    add(c2, c3);
     subtract(30, 5);
     multiply(8, 7);
+    doubleadd(3.6, 7.4);
+    doublesubtract(27.9, 98.5);
+    doublemultiply(3.5, 1.5);
+    doubledivide(4.763, 2);
     
     }
   public static void dataTypes() {
      byte a = 20;
      System.out.println(a); 
+     
   
      short b = 25000; 
      System.out.println(b); 
      
      int c = 500;
      System.out.println(c);
-     
+   
+    
      long d = 5000000L;
      System.out.println(d);
      
@@ -119,6 +134,34 @@ public class Fundamentals
     int intone = a;
     int inttwo = b;
     int quotient = intone / inttwo;
+    System.out.println(quotient);
+    return quotient;
+ }  
+    public static double doubleadd(double a, double b) {
+    double intone = a;
+    double inttwo = b;
+    double sum = intone + inttwo;
+    System.out.println(sum);
+    return sum;
+ }  
+   public static double doublesubtract(double a, double b) {
+    double intone = a;
+    double inttwo = b;
+    double difference = intone - inttwo;
+    System.out.println(difference);
+    return difference;
+ }  
+  public static double doublemultiply(double a, double b) {
+    double intone = a;
+    double inttwo = b;
+    double product = intone * inttwo;
+    System.out.println(product);
+    return product;
+ }  
+  public static double doubledivide(double a, double b) {
+    double intone = a;
+    double inttwo = b;
+    double quotient = intone / inttwo;
     System.out.println(quotient);
     return quotient;
  }  
