@@ -7,6 +7,12 @@
  */
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.List;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.*;
+
+
 
 public class Fundamentals
 { 
@@ -101,17 +107,18 @@ public class Fundamentals
     System.out.println("Triangles of numbers (5, 3, 7):");
     System.out.println(triangle(5));
     System.out.println(triangle(3));
-    System.out.print(triangle(7));
+    System.out.println(triangle(7));
     
     // Pyramid!
     
-    System.out.println("Pyramids of numbers (5, 3, 7)");
+    System.out.println("Pyramids of numbers (5, 3, 7):");
     System.out.println(pyramid(5));
     System.out.println(pyramid(3));
     System.out.println(pyramid(7));
     
     
-    
+    System.out.println(checkerboard(3,3));
+    System.out.println(checkerboard(4,7));
     
     
     
@@ -325,6 +332,82 @@ public static String pyramid(int a) {
     } while (count < (a + 1));
     finalstring = new StringBuffer(finalstring).reverse().toString();
 return finalstring;
+}
+// Okay. Here we go. THE HARD ONE
+public static String checkerboard(int h, int w) {
+String finalstring = "";
+String totalwidth = "";
+for (int i = 1; i < w + 1; i++) {
+    String widthbit = "- ";
+    totalwidth = totalwidth + widthbit;
+}
+String finalwidth = "+ " + totalwidth + "+ ";
+String fullhashrow = "";
+
+for (int b = 1; b < w + 1; b++) {
+    String rowhash = "# ";
+    fullhashrow = fullhashrow + rowhash;
+}
+String justhashes = fullhashrow;
+String hashcompile = "";
+fullhashrow = "| " + fullhashrow + "| ";
+String allhashtags = "";
+for (int s = 1; s < h + 1; s++) {
+    String allhashes = fullhashrow;
+    allhashtags = allhashtags + allhashes + "\n" ;
+    hashcompile = hashcompile + justhashes + "\n ";
+}
+
+
+
+
+
+
+
+int dashnumber = w + 2;
+int hashrownumber = w + 2;
+
+
+
+String bigfinal1 = finalwidth + "\n" + allhashtags + finalwidth;
+
+String[] hashpieces = bigfinal1.split(" ");
+List<String> hashpiecelist = new ArrayList<String>(Arrays.asList(hashpieces));
+
+List<String> bigfinalboy = hashpiecelist;
+int hashnumber = h * w;
+ArrayList<Integer> hashindexes = new ArrayList<Integer>(hashnumber);
+int listsize = bigfinalboy.size();
+
+for (int i = 0; i < listsize; i++) {
+if (bigfinalboy.get(i).equals("#")) {
+hashindexes.add(i);
+} else { continue; }
+}
+
+int hashindsize = hashindexes.size();
+Random randomhash = new Random();
+
+int randomhashyo = hashindexes.get(randomhash.nextInt(hashindsize));
+    
+
+
+Random replacement = new Random();
+     int low = 0;
+     int high = 9;
+     int result = replacement.nextInt(high-low) + low;
+     String resultstr = Integer.toString(result);
+
+
+ bigfinalboy.set(randomhashyo, resultstr);
+ 
+    
+String bigfinalboyFINAL = String.join(" ", bigfinalboy);
+     
+System.out.println(bigfinalboyFINAL);
+return bigfinalboyFINAL;
+
+//ok so this is a kind of weird version of it but I think the bare bones r there
 }
 }
 
