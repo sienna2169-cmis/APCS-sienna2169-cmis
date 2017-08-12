@@ -6,6 +6,8 @@
  * @version (a version number or a date)
  */
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
+
 public class Fundamentals
 { 
  
@@ -78,8 +80,39 @@ public class Fundamentals
     System.out.println("Double quotient: " + op8);
     // ^^ and here's the double method results
     
+    //NEXT UP: Conditionals. Here's the 'compare' method:
     
+    compare(2, 5);
+    compare(6, 4);
+    compare(5, 5);
+    
+    // now here's the even, odd, or zero method:
+    
+    evenOddZero(4);
+    evenOddZero(3);
+    evenOddZero(0);
    
+    // Moving onto Loops:
+    System.out.println("Square table:");
+    squareTable();
+    
+    // TRIANGLE NUMBER !! :)
+    
+    System.out.println("Triangles of numbers (5, 3, 7):");
+    System.out.println(triangle(5));
+    System.out.println(triangle(3));
+    System.out.print(triangle(7));
+    
+    // Pyramid!
+    
+    System.out.println("Pyramids of numbers (5, 3, 7)");
+    System.out.println(pyramid(5));
+    System.out.println(pyramid(3));
+    System.out.println(pyramid(7));
+    
+    
+    
+    
     
     
     }
@@ -213,4 +246,85 @@ public class Fundamentals
     double quotient = intone / inttwo;
     return quotient;
  }  
+ 
+ // ^^^ Finished with Data Types, Variables and Static Methods
+ 
+ public static void compare(int a, int b) { 
+     String comparison = "";
+     if (a >= b)
+     {
+       comparison = "greater than";
+        }
+     if (b >= a){
+       comparison = "less than";
+        } 
+     if (b == a ) {
+        comparison = "equal to";
+        }
+     System.out.println("The value of a is " + a + " and it is " + comparison  + " b whose value is " + b + ".");
+    }
+ public static void evenOddZero(int a){
+    int output = 0;
+    if (a % 2 == 0) {
+    output = 1;
+    } 
+    if (a == 0) {
+    output = 0;
+    } 
+    if ( a % 2 != 0) {
+    output = -1;
+    }
+    System.out.println(output);
+    }
+    
+    // Done with Conditionals section
+ public static void squareTable() {
+    for (int i = 1; i<11; i++){
+    int square = i * i;
+    int randomnum = ThreadLocalRandom.current().nextInt(i, square + 1);
+    System.out.println(i + "\t" + square + "\t" + randomnum);
+    }
+    // WOOOOOOOOOOO DONE 
+    
+    } 
+ public static String triangle(int a) {
+    String result = "";
+    for (int i = 1; i< (a + 1) ; i++) {
+    String trianglepiece = "";
+   if (i != a) {
+     trianglepiece = i + "+";
+    
+    
+} 
+else {
+    trianglepiece = Integer.toString(i);
+       
 }
+result =  result + trianglepiece ;
+}
+    
+  result = new StringBuffer(result).reverse().toString();
+  
+  return result;
+  
+  // I got it!!!!
+} 
+public static String pyramid(int a) {
+    int count = 1;
+    String finalstring = "";
+    do { 
+        String pyramidbit = "";
+            if (count != a) {
+                pyramidbit = ")" + count + "*" + count + "(" + "+" ;
+            }
+            else {
+                pyramidbit = ")" + count + "*" + count + "(";
+            }
+       finalstring = finalstring + pyramidbit;
+       count++;
+    } while (count < (a + 1));
+    finalstring = new StringBuffer(finalstring).reverse().toString();
+return finalstring;
+}
+}
+
