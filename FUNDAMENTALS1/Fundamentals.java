@@ -343,36 +343,57 @@ public class Fundamentals
         }
         String finalwidth = "+" + totalwidth + "+";
         String fullhashrow = "";
-
-        for (int b = 1; b < w + 1; b++) {
-            String rowhash = " ";
-            if (b%2 != 0){
-            rowhash = "#";}
+        
+    
+        int wcount = 1;
+        int hcount = 1;
+        String rowhash = "";
+        String fullrow = "";
+        String allrows = "";
+        for(int hc = 1; hc < h ;hc++) {
+        if (hc % 2 == 0) {
+            for (wcount = 1;wcount< w; wcount++) {
+            if (wcount%2 == 0){
+            rowhash = "#";
+            }
+            if (wcount % 2 != 0) { 
+            rowhash = " ";
+            }
+            wcount++;
             fullhashrow = fullhashrow + rowhash;
-        }
-        int count = 1;
-        do {
-            // I NEED TO MAKE IT THE FOR LOOP ABOVE IF THE COUNT IS A 3RD OR WHATEVER
-            
-        } while (count <= w/2);
+            allrows = allrows + fullhashrow;
+            rowhash = "|" + allrows + "|" + "\n";
+        } 
+        
+    }
+    if (hc % 2 != 0) {
+        for (wcount = 1; wcount < w; wcount++){
+            if (wcount%2 == 0){
+            rowhash = " ";
+            }
+            if (wcount % 2 != 0) { 
+            rowhash = "#";
+            }
+            fullhashrow = fullhashrow + rowhash;
+            allrows = allrows + fullhashrow ;
+            rowhash = "|" + allrows + "|" + "\n";
+        } 
+    
+    }
+        
+     
+    }
         String justhashes = fullhashrow;
-        String hashcompile = "";
-        fullhashrow = "|" + fullhashrow + "|";
-        String allhashtags = "";
-        for (int s = 1; s < h + 1; s++) {
-            String allhashes = fullhashrow;
-            allhashtags = allhashtags + allhashes + "\n" ;
-            hashcompile = hashcompile + justhashes + "\n ";
-        }
-
-
+        String hashcompile = finalwidth + "\n" + rowhash + finalwidth + "\n";
+     
+        
 
 
         //int dashnumber = w + 2;
         //int hashrownumber = w + 2;
 
 
-        String bigfinal1 = finalwidth + "\n" + allhashtags + finalwidth;
+        
 
         //String[] hashpieces = bigfinal1.split(" ");
         //List<String> hashpiecelist = new ArrayList<String>(Arrays.asList(hashpieces));
@@ -405,7 +426,7 @@ public class Fundamentals
         //String bigfinalboyFINAL = String.join(" ", bigfinalboy);
 
         //System.out.println(bigfinalboyFINAL);
-        System.out.print(bigfinal1);
+        System.out.print(hashcompile);
         return hashcompile;
 
         //ok so this is a kind of weird version of it but I think the bare bones r there
