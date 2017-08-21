@@ -335,101 +335,57 @@ public class Fundamentals
     }
     // Okay. Here we go. THE HARD ONE
     public static String checkerboard(int h, int w) {
-        String finalstring = "";
-        String totalwidth = "";
+     String totalwidth = "";
         for (int i = 1; i < w + 1; i++) {
             String widthbit = "-";
             totalwidth = totalwidth + widthbit;
         }
         String finalwidth = "+" + totalwidth + "+";
-        String fullhashrow = "";
         
-    
-        int wcount = 1;
-        int hcount = 1;
-        String rowhash = "";
-        String fullrow = "";
-        String allrows = "";
-        for(int hc = 1; hc < h ;hc++) {
-        if (hc % 2 == 0) {
-            for (wcount = 1;wcount< w; wcount++) {
-            if (wcount%2 == 0){
-            rowhash = "#";
-            }
-            if (wcount % 2 != 0) { 
-            rowhash = " ";
-            }
-            wcount++;
-            fullhashrow = fullhashrow + rowhash;
-            allrows = allrows + fullhashrow;
-            rowhash = "|" + allrows + "|" + "\n";
-        } 
+        String partofit = "";
+        String alltogether = "";
+        for (int wi = 1; wi < w + 1; wi++) {
+        if ( wi % 2 == 0) {
+        partofit = "#";
+        }
+        if (wi%2 != 0) {
+        partofit = " ";
+        }
+        alltogether = alltogether + partofit;
+        }
+        String evenrowstr = "|" + alltogether + "|";
         
+        String oddpartofit = "";
+        String oddalltogether = "";
+        for (int wi = 1; wi < w + 1; wi++) {
+        if ( wi % 2 != 0) {
+        oddpartofit = "#";
+        }
+        if (wi%2 == 0) {
+        oddpartofit = " ";
+        }
+        oddalltogether = oddalltogether + oddpartofit;
+        }
+        String oddrowstr = "|" + oddalltogether + "|";
+        
+        String finalrows = "";
+        String finalrowpart = "";
+        for (int he = 1; he < h + 1; he++) {
+        if (he % 2 == 0) {
+        finalrowpart = evenrowstr;
+        }
+        if (he % 2 != 0) {
+        finalrowpart = oddrowstr;
+        }
+        finalrows = finalrows + finalrowpart + "\n";
     }
-    if (hc % 2 != 0) {
-        for (wcount = 1; wcount < w; wcount++){
-            if (wcount%2 == 0){
-            rowhash = " ";
-            }
-            if (wcount % 2 != 0) { 
-            rowhash = "#";
-            }
-            fullhashrow = fullhashrow + rowhash;
-            allrows = allrows + fullhashrow ;
-            rowhash = "|" + allrows + "|" + "\n";
-        } 
-    
-    }
+    String finalstring = finalwidth + "\n" + finalrows + finalwidth;
+        System.out.print(finalstring);
         
-     
-    }
-        String justhashes = fullhashrow;
-        String hashcompile = finalwidth + "\n" + rowhash + finalwidth + "\n";
-     
         
-
-
-        //int dashnumber = w + 2;
-        //int hashrownumber = w + 2;
-
-
         
-
-        //String[] hashpieces = bigfinal1.split(" ");
-        //List<String> hashpiecelist = new ArrayList<String>(Arrays.asList(hashpieces));
-
-        //List<String> bigfinalboy = hashpiecelist;
-        //int hashnumber = h * w;
-        //ArrayList<Integer> hashindexes = new ArrayList<Integer>(hashnumber);
-        //int listsize = bigfinalboy.size();
-
-        //for (int i = 0; i < listsize; i++) {
-          //  if (bigfinalboy.get(i).equals("#")) {
-          //      hashindexes.add(i);
-          //  } else { continue; }
-        //}
-
-        //int hashindsize = hashindexes.size();
-        //Random randomhash = new Random();
-
-        //int randomhashyo = hashindexes.get(randomhash.nextInt(hashindsize));
-
-
-        Random replacement = new Random();
-        int low = 0;
-        int high = 9;
-        int result = replacement.nextInt(high-low) + low;
-        //String resultstr = Integer.toString(result);
-
-        //bigfinalboy.set(randomhashyo, resultstr);
-    
-        //String bigfinalboyFINAL = String.join(" ", bigfinalboy);
-
-        //System.out.println(bigfinalboyFINAL);
-        System.out.print(hashcompile);
-        return hashcompile;
-
-        //ok so this is a kind of weird version of it but I think the bare bones r there
-    }
+        return "Help?";
+       
 }
 
+}
