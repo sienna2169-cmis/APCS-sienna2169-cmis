@@ -7,9 +7,6 @@
  */
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
-import java.util.List;
-import java.util.Arrays;
-import java.util.ArrayList;
 import java.util.*;
 
 
@@ -335,53 +332,12 @@ public class Fundamentals
     }
     // Okay. Here we go. THE HARD ONE
     public static String checkerboard(int h, int w) {
-     String totalwidth = "";
-        for (int i = 1; i < w + 1; i++) {
-            String widthbit = "-";
-            totalwidth = totalwidth + widthbit;
-        }
-        String finalwidth = "+" + totalwidth + "+";
-        
-        String partofit = "";
-        String alltogether = "";
-        for (int wi = 1; wi < w + 1; wi++) {
-        if ( wi % 2 == 0) {
-        partofit = "#";
-        }
-        if (wi%2 != 0) {
-        partofit = " ";
-        }
-        alltogether = alltogether + partofit;
-        }
-        String evenrowstr = "|" + alltogether + "|";
-        
-        String oddpartofit = "";
-        String oddalltogether = "";
-        for (int wi = 1; wi < w + 1; wi++) {
-        if ( wi % 2 != 0) {
-        oddpartofit = "#";
-        }
-        if (wi%2 == 0) {
-        oddpartofit = " ";
-        }
-        oddalltogether = oddalltogether + oddpartofit;
-        }
-        String oddrowstr = "|" + oddalltogether + "|";
-        
-        String finalrows = "";
-        String finalrowpart = "";
-        for (int he = 1; he < h + 1; he++) {
-        if (he % 2 == 0) {
-        finalrowpart = evenrowstr;
-        }
-        if (he % 2 != 0) {
-        finalrowpart = oddrowstr;
-        }
-        finalrows = finalrows + finalrowpart + "\n";
+    int totalpixels = (h * w) + 4 + (h * 2) + (w * 2);
+    String thehashs = "";
+    for (int hashcount = w + 3; hashcount <= hashcount + (h*w) ; hashcount++) {
+    
+    
     }
-    String finalstring = finalwidth + "\n" + finalrows + finalwidth;
-        System.out.print(finalstring);
-        
         
         
         return "Help?";
