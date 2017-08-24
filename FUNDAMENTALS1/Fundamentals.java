@@ -10,6 +10,7 @@ import java.util.concurrent.ThreadLocalRandom;
 import java.util.*;
 
 
+
 public class Fundamentals
 { 
 
@@ -334,12 +335,41 @@ public class Fundamentals
     public static String checkerboard(int h, int w) {
     int totalpixels = (h * w) + 4 + (h * 2) + (w * 2);
     String thehashs = "";
-    for (int hashcount = w + 3; hashcount <= hashcount + (h*w) ; hashcount++) {
+    String hashpiece = "";
+    int hashnumber = h*w;
+    double rand = Math.random() * 10.0;
+    int integer = (int)rand;
     
+       Random ranny = new Random();
+    int Low = 1;
+    int High = hashnumber;
+    int Result = ranny.nextInt(High-Low) + Low;
+    
+    int thehash = Result;
+    for (int hashcount = 1; hashcount <= h*w ; hashcount++) {
+    
+    if (hashcount % 2 != 0) {
+    hashpiece = "#" ;
+    }
+    if (hashcount % 2 == 0) {
+    hashpiece = " ";
+    }
+    if (hashcount % w == 0) {
+    hashpiece = hashpiece + "\n" ;
+    }
+    if (hashcount == thehash && hashcount % 2 !=0) {
+    hashpiece = "INTEGER. THE RANDOM NUMBER.";
+    }
+    thehashs = thehashs + hashpiece;
     
     }
+ 
+    
+   
+    
         
-        
+        System.out.println(thehashs);
+        System.out.println(integer);
         return "Help?";
        
 }
