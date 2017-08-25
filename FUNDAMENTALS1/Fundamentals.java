@@ -358,7 +358,8 @@ public class Fundamentals
     hashpiece = hashpiece + "\n" ;
     }
     if (hashcount == thehash && hashcount % 2 !=0) {
-    hashpiece = "INTEGER. THE RANDOM NUMBER.";
+    hashpiece = Integer.toString(integer);
+    //ok yeah this doesn't work completely
     }
     thehashs = thehashs + hashpiece;
     
