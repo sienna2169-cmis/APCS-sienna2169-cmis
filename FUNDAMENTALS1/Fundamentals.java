@@ -346,31 +346,110 @@ public class Fundamentals
     int Result = ranny.nextInt(High-Low) + Low;
     
     int thehash = Result;
-    for (int hashcount = 1; hashcount <= h*w ; hashcount++) {
+    //for (int hashcount = 1; hashcount <= h*w ; hashcount++) {
     
-    if (hashcount % 2 != 0) {
-    hashpiece = "#" ;
-    }
-    if (hashcount % 2 == 0) {
-    hashpiece = " ";
-    }
-    if (hashcount % w == 0) {
-    hashpiece = hashpiece + "\n" ;
-    }
-    if (hashcount == thehash && hashcount % 2 !=0) {
-    hashpiece = Integer.toString(integer);
+   // if (hashcount % 2 != 0) {
+   // hashpiece = "#" ;
+   // }
+   // if (hashcount % 2 == 0) {
+    //hashpiece = " ";
+   // }
+   // if (hashcount % w == 0) {
+    //hashpiece = hashpiece + "\n" ;
+    //}
+   // if (hashcount == thehash && hashcount % 2 !=0) {
+   // hashpiece = Integer.toString(integer);
     //ok yeah this doesn't work completely
-    }
-    thehashs = thehashs + hashpiece;
+    //}
+   // thehashs = thehashs + hashpiece;
     
-    }
- 
-    
-   
-    
+   // }
+int Max = w;
+int Min = 1;
+if (Max % 2 == 0){ --Max;}
+if (Min % 2 == 0) {++Min;}
+int Random_No = Min + 2*(int)(Math.random()*((Max-Min)/2+1));
+
+
+   String totalwidth = "";
+     for (int i = 1; i < w + 1; i++) {
+            String widthbit = "-";
+            totalwidth = totalwidth + widthbit;
+        }
+        String finalwidth = "+" + totalwidth + "+";
         
-        System.out.println(thehashs);
-        System.out.println(integer);
+        String partofit = "";
+        String alltogether = "";
+        for (int wi = 1; wi < w + 1; wi++) {
+        if ( wi % 2 == 0) {
+        partofit = "#";
+        }
+        if (wi%2 != 0) {
+        partofit = " ";
+        }
+        alltogether = alltogether + partofit;
+        }
+        String evenrowstr = "|" + alltogether + "|";
+        
+        String allofem = "";
+        String onepart = "";
+        for (int wi = 1; wi < w + 1; wi++) {
+        if ( wi % 2 == 0) {
+        onepart = "#";
+        }
+        if (wi%2 != 0) {
+        onepart = " ";
+        }
+        allofem = allofem + onepart;
+        }
+        String randomevenrowstr = "|" + allofem + "|";
+        // HERE. GOTTA GENERATE A RANDOM EVEN NUMBER
+        //thennnn select random row and replace it with either even or odd random number
+        // - containing row
+        String oddallofem = "";
+        String oddonepart = "";
+        for (int wi = 1; wi < w + 1; wi++) {
+        if ( wi % 2 != 0) {
+        oddonepart = "#";
+        }
+        if (wi%2 == 0) {
+        oddonepart = " ";
+        }
+        if (wi == Random_No) {
+        oddonepart = Integer.toString(integer);
+        }
+        oddallofem = oddallofem + oddonepart;
+        }
+        String randomoddrowstr = "|" + oddallofem + "|";
+        
+        String oddpartofit = "";
+        String oddalltogether = "";
+        for (int wi = 1; wi < w + 1; wi++) {
+        if ( wi % 2 != 0) {
+        oddpartofit = "#";
+        }
+        if (wi%2 == 0) {
+        oddpartofit = " ";
+        }
+        oddalltogether = oddalltogether + oddpartofit;
+        }
+        String oddrowstr = "|" + oddalltogether + "|";
+        
+        String finalrows = "";
+        String finalrowpart = "";
+        for (int he = 1; he < h + 1; he++) {
+        if (he % 2 == 0) {
+        finalrowpart = evenrowstr;
+        }
+        if (he % 2 != 0) {
+        finalrowpart = oddrowstr;
+        }
+        finalrows = finalrows + finalrowpart + "\n";
+    }
+    String finalstring = finalwidth + "\n" + finalrows + finalwidth;
+
+    System.out.println(finalstring);
+    System.out.print(Random_No);
         return "Help?";
        
 }
