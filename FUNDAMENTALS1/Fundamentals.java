@@ -339,37 +339,25 @@ public class Fundamentals
     int hashnumber = h*w;
     double rand = Math.random() * 10.0;
     int integer = (int)rand;
-    
-       Random ranny = new Random();
-    int Low = 1;
-    int High = hashnumber;
-    int Result = ranny.nextInt(High-Low) + Low;
-    
-    int thehash = Result;
-    //for (int hashcount = 1; hashcount <= h*w ; hashcount++) {
-    
-   // if (hashcount % 2 != 0) {
-   // hashpiece = "#" ;
-   // }
-   // if (hashcount % 2 == 0) {
-    //hashpiece = " ";
-   // }
-   // if (hashcount % w == 0) {
-    //hashpiece = hashpiece + "\n" ;
-    //}
-   // if (hashcount == thehash && hashcount % 2 !=0) {
-   // hashpiece = Integer.toString(integer);
-    //ok yeah this doesn't work completely
-    //}
-   // thehashs = thehashs + hashpiece;
-    
-   // }
+   
+   int minimum = 1;
+   int maximum = h;
+   int therow = ThreadLocalRandom.current().nextInt(minimum, maximum + 1);
+
+
 int Max = w;
 int Min = 1;
 if (Max % 2 == 0){ --Max;}
 if (Min % 2 == 0) {++Min;}
 int Random_No = Min + 2*(int)(Math.random()*((Max-Min)/2+1));
 
+Random random = new Random();
+        int theLow = 2;
+        int theHigh = w;
+        int randomNumber = random.nextInt(theHigh-theLow) + theLow;
+        if(randomNumber % 2 != 0){
+            randomNumber = randomNumber + 1;
+        }
 
    String totalwidth = "";
      for (int i = 1; i < w + 1; i++) {
@@ -399,6 +387,9 @@ int Random_No = Min + 2*(int)(Math.random()*((Max-Min)/2+1));
         }
         if (wi%2 != 0) {
         onepart = " ";
+        }
+        if (wi == randomNumber) {
+        onepart = Integer.toString(integer);
         }
         allofem = allofem + onepart;
         }
@@ -444,12 +435,18 @@ int Random_No = Min + 2*(int)(Math.random()*((Max-Min)/2+1));
         if (he % 2 != 0) {
         finalrowpart = oddrowstr;
         }
+        if (he == therow) {
+        if (he % 2 == 0) {finalrowpart = randomevenrowstr;}
+        if (he % 2 != 0) {finalrowpart = randomoddrowstr;}
+        }
         finalrows = finalrows + finalrowpart + "\n";
     }
     String finalstring = finalwidth + "\n" + finalrows + finalwidth;
 
     System.out.println(finalstring);
-    System.out.print(Random_No);
+   
+    
+
         return "Help?";
        
 }
