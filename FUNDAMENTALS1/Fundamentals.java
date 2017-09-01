@@ -447,7 +447,7 @@ Random random = new Random();
    
     
 
-        return "Help?";
+        return finalstring;
        
 }
 
