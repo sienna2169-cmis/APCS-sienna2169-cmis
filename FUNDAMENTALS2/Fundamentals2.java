@@ -141,6 +141,10 @@ public static boolean middleItem(boolean a[]) {
     }
     else{ return a[(arrayLength - 1)/2];}}
  
-         
+//public static int[] randomInts(int n, int min, int max) {
+//for (i = 0, i <= n, i++) {
+
+//}
+//}         
     }
 
