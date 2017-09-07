@@ -31,6 +31,7 @@ public class Fundamentals2
     printArray(b, true);
     printArray(c, false);
     System.out.println(lastItem(a));
+    System.out.println(middleItem(a));
     }
    public static void printArray(int a[], boolean b) {
        if (b == true) {
@@ -74,7 +75,7 @@ public class Fundamentals2
         if(i%2 != 0) {continue;}
        }
         }}
-   public static void printArray(char a[], boolean b) {
+   public static void printArray(boolean a[], boolean b) {
        if (b == true) {
         for (int i = 0; i < a.length ; i++) {
         System.out.println(a[i]);
@@ -88,49 +89,8 @@ public class Fundamentals2
         if(i%2 != 0) {continue;}
        }
         }}
-   public static void printArray(byte a[], boolean b) {
-       if (b == true) {
-        for (int i = 0; i < a.length ; i++) {
-        System.out.println(a[i]);
-        }
-        } 
-       if(b == false) {
-         for (int i = 0; i < a.length ; i++) {
-        if(i % 2 == 0) {
-        System.out.println(a[i]);
-        }
-        if(i%2 != 0) {continue;}
-       }
-        }}
-   public static void printArray(short a[], boolean b) {
-       if (b == true) {
-        for (int i = 0; i < a.length ; i++) {
-        System.out.println(a[i]);
-        }
-        } 
-       if (b == false) {
-         for (int i = 0; i < a.length ; i++) {
-        if(i % 2 == 0) {
-        System.out.println(a[i]);
-        }
-        if(i%2 != 0) {continue;}
-       }
-        }}
-   public static void printArray(long a[], boolean b) {
-       if (b == true) {
-        for (int i = 0; i < a.length ; i++) {
-        System.out.println(a[i]);
-        }
-        } 
-       if (b== false) {
-         for (int i = 0; i < a.length ; i++) {
-        if(i % 2 == 0) {
-        System.out.println(a[i]);
-        }
-        if(i%2 != 0) {continue;}
-       }
-        }}
-        
+ 
+        //THIS DOESNT WORK WAIT
    public static int lastItem(int a[]) {
         int length = a.length;
         return a[length-1];
@@ -146,26 +106,41 @@ public class Fundamentals2
         return a[length-1];
         
         }     
-   public static char lastItem(char a[]) {
+   public static boolean lastItem(boolean a[]) {
         int length = a.length;
         return a[length-1];
         
         }
-   public static short lastItem(short a[]) {
-        int length = a.length;
-        return a[length-1];
-        
-        }
-   public static long lastItem(long a[]) {
-        int length = a.length;
-        return a[length-1];
-        
-        }
-   public static byte lastItem(byte a[]) {
-        int length = a.length;
-        return a[length-1];
-        
-        }     
+public static int middleItem( int a[]) {
+    int arrayLength = a.length;
+
+    if (arrayLength % 2 == 0) {
+    return a[(arrayLength /2) + 1];
+    }
+    else{ return a[(arrayLength -1)/2];}
+}
+public static double middleItem(double a[]) {
+     int arrayLength = a.length;
+
+    if (arrayLength % 2 == 0) {
+    return a[(arrayLength /2) + 1];
+    }
+    else{ return a[(arrayLength - 1)/2];}}
+public static String middleItem(String a[]) {
+     int arrayLength = a.length;
+
+    if (arrayLength % 2 == 0) {
+    return a[(arrayLength /2) + 1];
+    }
+    else{ return a[(arrayLength - 1)/2];}}
+public static boolean middleItem(boolean a[]) {
+     int arrayLength = a.length;
+
+    if (arrayLength % 2 == 0) {
+    return a[(arrayLength /2) + 1];
+    }
+    else{ return a[(arrayLength - 1)/2];}}
  
+         
     }
 
