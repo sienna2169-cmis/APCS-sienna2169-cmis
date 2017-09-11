@@ -1,7 +1,7 @@
-
+import java.util.*;
 public class Fundamentals2
 {
-    
+
    public static void main(String [] args) {
     int a[] = new int[5];
     a[0] = 1;
@@ -141,10 +141,16 @@ public static boolean middleItem(boolean a[]) {
     }
     else{ return a[(arrayLength - 1)/2];}}
  
-//public static int[] randomInts(int n, int min, int max) {
-//for (i = 0, i <= n, i++) {
-
-//}
-//}         
+public static /*int[]*/ void randomInts(int n, int min, int max) {
+int[] randomArray = new int[n];
+int randomNumber;
+for (int i = 0; i < randomArray.length; i++) {
+Random random = new Random();
+randomNumber = random.nextInt(max-min + 1) + min;
+randomArray[i] = randomNumber;
+}
+System.out.println(randomArray);
+}         
+//RANDOMINTS DOES N O T WORK IT JUST GIVES ME THIS BIG STRING OF GIBBERISH. HELP?
     }
 
