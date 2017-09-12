@@ -141,7 +141,7 @@ public static boolean middleItem(boolean a[]) {
     }
     else{ return a[(arrayLength - 1)/2];}}
  
-public static /*int[]*/ void randomInts(int n, int min, int max) {
+public static int[] randomInts(int n, int min, int max) {
 int[] randomArray = new int[n];
 int randomNumber;
 for (int i = 0; i < randomArray.length; i++) {
@@ -149,7 +149,7 @@ Random random = new Random();
 randomNumber = random.nextInt(max-min + 1) + min;
 randomArray[i] = randomNumber;
 }
-System.out.println(randomArray);
+return randomArray;
 }         
 //RANDOMINTS DOES N O T WORK IT JUST GIVES ME THIS BIG STRING OF GIBBERISH. HELP?
     }
