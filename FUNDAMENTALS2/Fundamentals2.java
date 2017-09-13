@@ -32,6 +32,8 @@ public class Fundamentals2
     printArray(c, false);
     System.out.println(lastItem(a));
     System.out.println(middleItem(a));
+    System.out.println(randomInts(5, 1, 3));
+    System.out.println(randomDoubles(6, 2.5, 3.6));
     }
    public static void printArray(int a[], boolean b) {
        if (b == true) {
@@ -151,6 +153,17 @@ randomArray[i] = randomNumber;
 }
 return randomArray;
 }         
+public static double[] randomDoubles(int n, double rangeMin, double rangeMax) {
+double[] randomArray = new double[n];
+int randomNumber;
+for (int i = 0; i < randomArray.length; i++) {
+Random r = new Random();
+double randomValue = rangeMin + (rangeMax - rangeMin) * r.nextDouble();
+randomArray[i] = randomValue;
+}
+return randomArray;
+
+}
 //RANDOMINTS DOES N O T WORK IT JUST GIVES ME THIS BIG STRING OF GIBBERISH. HELP?
     }
 
