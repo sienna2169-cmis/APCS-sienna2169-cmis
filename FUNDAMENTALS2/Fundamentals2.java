@@ -34,6 +34,7 @@ public class Fundamentals2
     System.out.println(middleItem(a));
     System.out.println(randomInts(5, 1, 3));
     System.out.println(randomDoubles(6, 2.5, 3.6));
+    System.out.println(copy(a));
     }
    public static void printArray(int a[], boolean b) {
        if (b == true) {
@@ -164,6 +165,13 @@ randomArray[i] = randomValue;
 return randomArray;
 
 }
-//RANDOMINTS DOES N O T WORK IT JUST GIVES ME THIS BIG STRING OF GIBBERISH. HELP?
+public static int[] copy(int[] a) {
+int[] copyArray = new int[a.length];
+for (int i = 0; i < a.length; i++) {
+int replacement = a[i];
+copyArray[i] = replacement;
+}
+return copyArray;
+}
     }
 
