@@ -32,9 +32,12 @@ public class Fundamentals2
     printArray(c, false);
     System.out.println(lastItem(a));
     System.out.println(middleItem(a));
-    System.out.println(randomInts(5, 1, 3));
-    System.out.println(randomDoubles(6, 2.5, 3.6));
-    System.out.println(copy(a));
+    printArray(randomInts(5, 1, 3), true);
+    printArray(randomDoubles(6, 2.5, 3.6), true);
+    printArray(copy(a), true);
+    
+    printArray(pairs(9), true);
+    
     }
    public static void printArray(int a[], boolean b) {
        if (b == true) {
@@ -172,6 +175,23 @@ int replacement = a[i];
 copyArray[i] = replacement;
 }
 return copyArray;
+}
+
+public static int[] pairs(int n) {
+int[] pairArray = new int[n * 2];
+int addedNum = pairArray.length / n;
+for (int i = 0; i < pairArray.length; i++) {
+if ( i % 2 == 0) {
+pairArray[i] = addedNum;
+} 
+
+if ( i % 2 != 0) {
+pairArray[i] = pairArray[i-1];
+}
+
+addedNum += 2;
+}
+return pairArray;
 }
     }
 
