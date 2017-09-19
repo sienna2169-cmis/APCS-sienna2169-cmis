@@ -37,6 +37,7 @@ public class Fundamentals2
     printArray(copy(a), true);
     
     printArray(pairs(9), true);
+    printArray(concat(a, a), true);
     
     }
    public static void printArray(int a[], boolean b) {
@@ -189,9 +190,28 @@ if ( i % 2 != 0) {
 pairArray[i] = pairArray[i-1];
 }
 
-addedNum += 2;
+addedNum += 1;
 }
 return pairArray;
 }
+
+public static int[] concat(int[] a, int[] b) {
+int [] concatArray = new int[a.length + b.length];
+for (int i = 0; i < a.length; i++) {
+concatArray[i] = a[i];
+}
+for (int i2 = 0; i2 < b.length; i2++) {
+concatArray[i2 + a.length] = b[i2];
+}
+return concatArray;
+
+
+}
+//public static int[] merge(int[] a, int[] b) {
+//int [] mergeArray = new int[a.length + b.length];
+
+
+
+//}
     }
 
