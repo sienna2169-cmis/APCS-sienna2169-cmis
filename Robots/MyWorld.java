@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.lang.reflect.*;
 public class MyWorld extends World
 {
-    Class[] robotClasses = new Class[]{};
+    Class[] robotClasses = new Class[]{Sienna.class};
     public MyWorld() throws NoSuchMethodException
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -15,6 +15,7 @@ public class MyWorld extends World
         removeObjects(getObjects(null));
         showText("", getWidth()/2,getHeight()/2);
         initLevel1();
+        addBlocks(0.1);
     }
 
     public void initBoard(){
