@@ -232,8 +232,9 @@ public class Fundamentals2
 
     }
     public static int[] merge(int[] a, int[] b) {
-       int[] mergeArray = new int[a.length + b.length];
+
        int lesserArray = 0;
+       int largerArray = 0;
        boolean aIsLonger = true;
        if (a.length > b.length) {
            lesserArray = b.length;
@@ -243,24 +244,32 @@ public class Fundamentals2
            lesserArray = a.length;
            aIsLonger = false;
         }
+               int[] mergeArray = new int[lesserArray*2];
+               for (int i = 0; i < mergeArray.length; i+=2) {
+                for (int i2 = 0; i2 < lesserArray; i++) {
+                mergeArray[i] = a[i2];
+                mergeArray[i+1] = b[i2];
+                }
+                
+                }
        
-       for (int i = 0; i < lesserArray; i++) {
-        if (i % 2 == 0) {mergeArray[i] = a[i]; }
-        if (i % 2 != 0) {mergeArray[i] = b[i];}
+       if (b.length == a.length) {
+        for (int i = 0; i < mergeArray.length/2; i+=2){
+        mergeArray[i] = a[i];
+        mergeArray[i+1] = b[i];}
+    } 
+    
+    
+    
+    
+    return mergeArray;
+    
         }
-       
-     
         
-     
-       if (a.length == b.length) {
-        for (int sameI = 0; sameI < mergeArray.length; sameI++) {
-        if (sameI % 2 == 0) {mergeArray[sameI] = a[sameI]; }
-        if (sameI % 2 != 0) {mergeArray[sameI] = b[sameI];}
-        }
         
-        }
-        return mergeArray;
-
+        
     }
-}
+
+    
+
 //NOT DONE YET WOWOOW
