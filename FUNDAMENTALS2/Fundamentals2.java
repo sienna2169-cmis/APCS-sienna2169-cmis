@@ -9,7 +9,7 @@ public class Fundamentals2
         a[2] = 8;
         a[3] = 2;
         a[4] = 0;
-        
+
         int another[] = new int[8];
         another[0] = 2;
         another[1] = 6;
@@ -19,7 +19,6 @@ public class Fundamentals2
         another[5] = 17;
         another[6] = 12;
         another[7] = 0;
-        
 
         double b[] = new double[5];
         b[0] = 19.4;
@@ -231,45 +230,82 @@ public class Fundamentals2
         return concatArray;
 
     }
+
     public static int[] merge(int[] a, int[] b) {
 
-       int lesserArray = 0;
-       int largerArray = 0;
-       boolean aIsLonger = true;
-       if (a.length > b.length) {
-           lesserArray = b.length;
-           aIsLonger = true;
+        int lesserArray = 0;
+        int largerArray = 0;
+        boolean aIsLonger = true;
+        if (a.length > b.length) {
+            lesserArray = b.length;
+            largerArray = a.length;
+            aIsLonger = true;
         }
-       if (b.length > a.length) {
-           lesserArray = a.length;
-           aIsLonger = false;
+        if (b.length > a.length) {
+            lesserArray = a.length;
+            largerArray = b.length;
+            aIsLonger = false;
         }
-               int[] mergeArray = new int[lesserArray*2];
-               for (int i = 0; i < mergeArray.length; i+=2) {
-                for (int i2 = 0; i2 < lesserArray; i++) {
-                mergeArray[i] = a[i2];
-                mergeArray[i+1] = b[i2];
-                }
-                
-                }
-       
-       if (b.length == a.length) {
-        for (int i = 0; i < mergeArray.length/2; i+=2){
-        mergeArray[i] = a[i];
-        mergeArray[i+1] = b[i];}
-    } 
-    
-    
-    
-    
-    return mergeArray;
-    
-        }
+        int[] mergeArray = new int[lesserArray*2];
+
+        int[] arrayOne = new int[lesserArray];
+        int[] arrayTwo = new int[lesserArray];
+
+        for (int i = 0; i < lesserArray; i++) {
+            arrayOne[i] = a[i];
+            arrayTwo[i] = b[i];
+
+        } 
+        int i2 = 0;
+        //for (int i2 = 0; i2 < mergeArray.length; i2+=2) {
+            for (int i3 = 0; i3 < lesserArray; i3++) {
+            if(i2 % 2 == 0 && i2 != mergeArray.length - 1) {
+            mergeArray[i2] = arrayOne[i3];
+            mergeArray[i2+1] = arrayTwo[i3]; }
+            if (i2 % 2 != 0 && i2 != mergeArray.length - 1) {
+            mergeArray[i2] = arrayTwo[i3];
+            mergeArray[i2+1] = arrayOne[i3];
+            } 
+            else if(i2 == mergeArray.length - 1) {
+            mergeArray[i2] = arrayOne[i3];
+            }
+            i2+=2;
+            }
+            
+           int difference[] = new int[largerArray - lesserArray];
+            if (aIsLonger == true) {     
+            for (int last = 0; last < difference.length; last++) {
+            difference[last] = a[lesserArray + last];
+            }
+            
+            }
+            else { 
+            for (int last = 0; last < difference.length; last++) {
+            difference[last] = b[lesserArray + last];
+            }
+          
+            }
         
-        
+        //}
+        //for (int i = 0; i < mergeArray.length; i+=2) {
+        //  for (int i2 = 0; i2 < lesserArray; i++) {
+        //  mergeArray[i] = a[i2];
+        //mergeArray[i+1] = b[i2];
+        //}
+
+        //}
+
+        //if (b.length == a.length) {
+        // for (int i = 0; i < mergeArray.length/2; i+=2){
+        // mergeArray[i] = a[i];
+        // mergeArray[i+1] = b[i];}
+        //} 
+
+    
+        return concat(mergeArray, difference);
         
     }
-
+        
+}
     
-
 //NOT DONE YET WOWOOW
