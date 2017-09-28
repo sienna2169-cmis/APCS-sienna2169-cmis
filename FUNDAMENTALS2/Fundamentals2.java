@@ -49,7 +49,8 @@ public class Fundamentals2
         //printArray(pairs(9), true);
         //printArray(concat(a, a), true);
         //printArray(merge(a, another), true);
-        reverse(a);
+        //reverse(a);
+        printArray(subArray(a, 1, 3), true);
 
     }
 
@@ -303,6 +304,16 @@ public class Fundamentals2
     }
     
     printArray(array, true);
+    }
+    public static int[] subArray(int[] array, int start, int stop) {
+    int length = stop - start;
+    int subArray[] = new int[length];
+    int count = 0;
+    for (int i = start; i < stop; i++) {
+    subArray[count] = array[i];
+    count++;
+    }
+    return subArray;
     }
 
 }
