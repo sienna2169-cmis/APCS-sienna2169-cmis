@@ -9,6 +9,13 @@ public class Fundamentals2
         a[2] = 8;
         a[3] = 2;
         a[4] = 0;
+        
+         int a2[] = new int[5];
+        a2[0] = 6;
+        a2[1] = 2;
+        a2[2] = 7;
+        a2[3] = 0;
+        a2[4] = 4;
 
         int another[] = new int[8];
         another[0] = 2;
@@ -26,6 +33,13 @@ public class Fundamentals2
         b[2] = 81.6;
         b[3] = 2.88;
         b[4] = 9.999;
+        
+        double b2[] = new double[5];
+        b2[0] = 19;
+        b2[1] = 0.8;
+        b2[2] = 81;
+        b2[3] = 3.0;
+        b2[4] = 9.999;
 
         String c[] = new String[5];
         c[0] = "Hi";
@@ -50,7 +64,11 @@ public class Fundamentals2
         //printArray(concat(a, a), true);
         //printArray(merge(a, another), true);
         //reverse(a);
-        printArray(subArray(a, 1, 3), true);
+        //printArray(subArray(a, 1, 3), true);
+        //printArray(compareArrays(a, a2), true);
+        //printArray(minimize(a, 2), true);
+        //maximize(a, 2);
+        printArray(maxMerge(b, b2), true);
 
     }
 
@@ -315,7 +333,68 @@ public class Fundamentals2
     }
     return subArray;
     }
-
+    public static int[] compareArrays(int[] a, int[] b) {
+    int aCount = 0;
+    int bCount = 0;
+    int empty[] = new int[0];
+    for (int i = 0; i < a.length; i++) {
+    if (a[i] > b[i]) {
+    aCount += 1;
+    }
+    if (b[i] > a[i]) {
+    bCount += 1;
+    }
+    else { continue; }
+    
+    }
+    
+    if (aCount > bCount) {
+    return a;
+    }
+    if (bCount > aCount) {
+    return b;
+    }
+    else {return empty; }
+    
+    }
+    public static int[] minimize(int[] array, int threshold) {
+    int minimized[] = new int[array.length];
+    for (int i = 0; i < array.length; i++) {
+    minimized[i] = array[i];
+    if (minimized[i] > threshold) {
+    minimized[i] = threshold;
+    } else {continue;}
+    }
+    return minimized;
+    
+    }
+    public static void maximize(int[] array, int threshold) {
+    int copy[] = new int[array.length];
+    for (int ic = 0; ic < array.length; ic++) {
+    copy[ic] = array[ic];
+    }
+    for (int i = 0; i < array.length; i++) {
+    array[i] = copy[i];
+    if (array[i] < threshold) {
+    array[i] = threshold;
+    } else {continue;}
+    }
+    
+    printArray(array, true);
+    }
+    public static double[] maxMerge(double[] a, double[] b) {
+    double output[] = new double[a.length];
+    for (int i = 0; i < a.length; i++) {
+    if (a[i] >= b[i]) {
+    output[i] = a[i];
+    }
+    if (b[i] > a[i]) {
+    output[i] = b[i];
+    }
+    }
+    return output;
+    
+    }
 }
 
 //NOT DONE YET WOWOOW
