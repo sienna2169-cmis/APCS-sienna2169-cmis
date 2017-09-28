@@ -48,7 +48,8 @@ public class Fundamentals2
 
         //printArray(pairs(9), true);
         //printArray(concat(a, a), true);
-        printArray(merge(a, another), true);
+        //printArray(merge(a, another), true);
+        reverse(a);
 
     }
 
@@ -257,55 +258,53 @@ public class Fundamentals2
 
         } 
         int i2 = 0;
-        //for (int i2 = 0; i2 < mergeArray.length; i2+=2) {
-            for (int i3 = 0; i3 < lesserArray; i3++) {
+
+        for (int i3 = 0; i3 < lesserArray; i3++) {
             if(i2 % 2 == 0 && i2 != mergeArray.length - 1) {
-            mergeArray[i2] = arrayOne[i3];
-            mergeArray[i2+1] = arrayTwo[i3]; }
+                mergeArray[i2] = arrayOne[i3];
+                mergeArray[i2+1] = arrayTwo[i3]; }
             if (i2 % 2 != 0 && i2 != mergeArray.length - 1) {
-            mergeArray[i2] = arrayTwo[i3];
-            mergeArray[i2+1] = arrayOne[i3];
+                mergeArray[i2] = arrayTwo[i3];
+                mergeArray[i2+1] = arrayOne[i3];
             } 
             else if(i2 == mergeArray.length - 1) {
-            mergeArray[i2] = arrayOne[i3];
+                mergeArray[i2] = arrayOne[i3];
             }
             i2+=2;
-            }
-            
-           int difference[] = new int[largerArray - lesserArray];
-            if (aIsLonger == true) {     
-            for (int last = 0; last < difference.length; last++) {
-            difference[last] = a[lesserArray + last];
-            }
-            
-            }
-            else { 
-            for (int last = 0; last < difference.length; last++) {
-            difference[last] = b[lesserArray + last];
-            }
-          
-            }
-        
-        //}
-        //for (int i = 0; i < mergeArray.length; i+=2) {
-        //  for (int i2 = 0; i2 < lesserArray; i++) {
-        //  mergeArray[i] = a[i2];
-        //mergeArray[i+1] = b[i2];
-        //}
+        }
 
-        //}
+        int difference[] = new int[largerArray - lesserArray];
+        if (aIsLonger == true) {     
+            for (int last = 0; last < difference.length; last++) {
+                difference[last] = a[lesserArray + last];
+            }
 
-        //if (b.length == a.length) {
-        // for (int i = 0; i < mergeArray.length/2; i+=2){
-        // mergeArray[i] = a[i];
-        // mergeArray[i+1] = b[i];}
-        //} 
+        }
+        else { 
+            for (int last = 0; last < difference.length; last++) {
+                difference[last] = b[lesserArray + last];
+            }
+
+        }
 
     
         return concat(mergeArray, difference);
-        
+
     }
-        
-}
+    public static void reverse(int[] array) {
+    int i2 = 0;
+    int copy[] = new int[array.length];
+    for (int ic = 0; ic < array.length; ic++) {
+    copy[ic] = array[ic];
+    }
+    for (int i = array.length - 1; i >= 0; i--) {
+    array[i] = copy[i2];
+    i2++;
+    }
     
+    printArray(array, true);
+    }
+
+}
+
 //NOT DONE YET WOWOOW
