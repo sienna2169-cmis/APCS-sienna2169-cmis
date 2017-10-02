@@ -5,11 +5,11 @@ public class Sienna extends Robot
     public Sienna(){
         super(Color.pink);
     }
-    
+
     public void init(){
-        
+
     }
-    
+
     /**
      * What your robot can do:
      * right() => move 1 to the right
@@ -22,21 +22,21 @@ public class Sienna extends Robot
      * isClearDown() => true means no block down
      */
     public void behave(){
+     right();
         
         
-        if (isClearRight() == true) {right();}
-        
-        if(isClearRight() == false) {
-            
-        left();
-    }
-        if (isClearLeft() == true) {
-        down();
         }
-        if (isClearDown() == true) {
-        left();
+        //else if (isClearRight() == true && isClearLeft() == true) {right();}
+        //else if (isClearRight() == false && isClearLeft() == false) {
+       //     if (isClearUp() == true) {up();}
+           // else {down();}
+       // }
+       // else if (isClearRight() == false) {
+          //  if (isClearLeft() == true) {left();}
+           // else if (isClearLeft() == false) {up();}
+           // else if (isClearUp() == false) {down();}
         }
-        }
-        
-    }
+
+    
+
 
