@@ -33,8 +33,10 @@ public class RobotTemplate extends Robot
 
         //4 = how far along the side we are
         //5 = we've hit the box! side 1
-        if (isClearRight() == false ) {
+        //3 is the side that we hit
+        if (isClearRight() == false) {
             setData(5, 1);
+            setData(3,1);
             if (getData(4) != 10) {
                 down();
                 count++;
@@ -62,30 +64,73 @@ public class RobotTemplate extends Robot
         // data 7 is how far along we are on the 2nd side
         if (getData(5) == 1 && isClearUp() == false) {
             setData(6, 1);
-            if (getData(7) != 10) {
-                down();
-                count++;
-                setData(4,count);
+            if (getData(7) != 10 && getData(3) != 1) {
+                right();
+                count2++;
+                setData(7,count2);
+            }
+            else if (getData(7) != 10 && getData(3) == 1) {
+                left();
+                count2++;
+                setData(7,count2);
             }
 
-            if (getData(7) == 10) {
-                left();
+        }
+        if (getData(7) == 10 && isClearUp() == true) {up();}
+        // observe right here. this tells it where to turn! making the interior
+        // count to 10 unnecessary except for this. so delete 2nd set of ifs!
+        int count3 = 0;
+        // data 8 is have we hit the 3rd side
+        if (getData(6) == 1 && isClearRight() == false) {
+            setData(8, 1);
+            setData(4, count3);
+            if (getData(4) != 10) {
+                up();
+                count3++;
+
+            }
+
+
+        }
+        if (getData(4) == 10 && getData(3) != 1 ) {
+            right();
+        }
+        else if (getData(4) == 10 && getData(3) == 1) {
+            left();
+        }
+        int count4 = 0;
+        if (isClearRight() == false && getData(8) == 1) {
+            setData(9,1);
+            setData(4, count4);
+            if (getData(4) != 10) {
+                up();
+                count++;
+
+            }
+
+            if (getData(4) == 10) {
+                right();
             }
         }
-        
-        if (getData(6) == 1 && isClearRight() == false) {
-        
-         setData(4, 0);
+        else if (isClearLeft() == false && getData(8) == 1) {
+            setData(9, 1);
+            setData(4,count4);
             if (getData(4) != 10) {
-                down();
+                up();
                 count++;
                 setData(4,count);
             }
 
             if (getData(4) == 10) {
-                right();
-            }}
-            
-            
+                left();
+            }
+        }
+
+        if (isClearRight() == true && (getData(5) == 1 && getData(3) == 1)) {
+        }
+
+        ///WHAT I NEED TO DOO:
+        // make an individual 'what direction to go in' thing for each big IF once it ends
+        // make an 'enter box' thing for all possibilities
     }
 }
