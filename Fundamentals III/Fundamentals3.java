@@ -140,9 +140,16 @@ public class Fundamentals3 {
     
     }
     
+    }
+    
+   public static String[][] locate(String[][] arr) {
+    int totalbits = arr.length * arr[0].length;
+    int hashnum;
+    if (totalbits % 2 != 0 ) {hashnum = (totalbits/2) + 1;}
+    else if (totalbits % 2 == 0) {hashnum = totalbits/2;}
     
     
     
-    
+    return arr; //this is here temporarily to appease the compiler
     }
 }
