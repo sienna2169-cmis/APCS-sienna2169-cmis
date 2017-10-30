@@ -27,10 +27,13 @@ public class Fundamentals3 {
         print2DArray(array2, true);
         //print2DArray(array2, false);
 
-        initializeArray(array2, 1);
-        print2DArray(array2, true);
+        //initializeArray(array2, 1);
+        //print2DArray(array2, true);
+        
+        snakePrint(array2);
 
     }
+
     public static void print2DArray(int[][] array, boolean rowMajor) {
         if (rowMajor == true) {
             for (int i = 0; i < array.length; i++) {
@@ -88,5 +91,58 @@ public class Fundamentals3 {
                 i2++;
             }
         }
+    }
+
+    public static void initializeArray(double[][] array, double value) {
+        for (int i = 0; i < array.length; i++) {
+            int i2 = 0;
+            while (i2 < array[i].length) {
+                array[i][i2] = value;
+                i2++;
+            }
+        }
+    }
+
+    public static void initializeArray(boolean[][] array, boolean value) {
+        for (int i = 0; i < array.length; i++) {
+            int i2 = 0;
+            while (i2 < array[i].length) {
+                array[i][i2] = value;
+                i2++;
+            }
+        }
+    }
+
+    public static void initializeArray(String[][] array, String value) {
+        for (int i = 0; i < array.length; i++) {
+            int i2 = 0;
+            while (i2 < array[i].length) {
+                array[i][i2] = value;
+                i2++;
+            }
+        }
+    }
+    
+    public static void snakePrint(int[][] arr) {
+    int rownum = arr.length;
+    int numnum = arr[0].length;
+    for (int i = 0; i < rownum; i++) {
+    if (i % 2 == 0) {
+    for (int i2 = 0; i2 < numnum; i2++) {
+    System.out.print(arr[i][i2] + " ");
+    }
+    }
+    if (i % 2 != 0) {
+    for (int i2 = numnum - 1; i2 >= 0; i2--) {
+    System.out.print(arr[i][i2] + " ");
+    }
+    }
+    
+    }
+    
+    
+    
+    
+    
     }
 }
