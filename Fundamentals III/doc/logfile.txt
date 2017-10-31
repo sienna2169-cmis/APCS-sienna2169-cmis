@@ -1,0 +1,35 @@
+Class documentation
+<---- javadoc command: ---->
+/usr/lib/jvm/java-8-oracle/bin/javadoc
+-author
+-version
+-nodeprecated
+-package
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+1.8
+-classpath
+/usr/share/bluej/bluejcore.jar:/usr/share/bluej/junit-4.8.2.jar:/usr/share/bluej/userlib/pi4j-core.jar:/usr/share/bluej/userlib/pi4j-device.jar:/usr/share/bluej/userlib/pi4j-service.jar:/usr/share/bluej/userlib/pi4j-gpio-extension.jar:/home/cmis/APCS-sienna2169-cmis/Fundamentals III
+-d
+/home/cmis/APCS-sienna2169-cmis/Fundamentals III/doc
+-encoding
+UTF-8
+-charset
+UTF-8
+-docletpath
+/usr/share/bluej/bjdoclet.jar
+-doclet
+bluej.doclet.doclets.formats.html.HtmlDoclet
+/home/cmis/APCS-sienna2169-cmis/Fundamentals III/Fundamentals3.java
+<---- end of javadoc command ---->
+Loading source file /home/cmis/APCS-sienna2169-cmis/Fundamentals III/Fundamentals3.java...
+/home/cmis/APCS-sienna2169-cmis/Fundamentals III/Fundamentals3.java:157: error: not a statement
+       f
+       ^
+/home/cmis/APCS-sienna2169-cmis/Fundamentals III/Fundamentals3.java:157: error: ';' expected
+       f
+        ^
+2 errors
