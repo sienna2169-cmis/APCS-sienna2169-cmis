@@ -186,31 +186,46 @@ public class Fundamentals3 {
         else if (totalbits % 2 == 0) {hashnum = totalbits/2;}
         int min = 0;
         int max = hashnum;
+        int thing = hashnum;
 
         Random random = new Random();
-        int  randomNumber = random.nextInt(max-min + 1) + min;
+
         double rand = Math.random() * 10.0;
         int modified = (int) rand;
         boolean hasBeenReplaced = false;
 
         Random rande = new Random();
-        boolean val = rande.nextInt(10)==1; // this here is whats wonkey
+
+        boolean val = true; // this here is whats wonkey
+        int randomNumber = random.nextInt(thing) + min;
 
         for (int i = 0; i < arr.length; i++) {
             int i2 = 0;
+            if (i != 0) {thing = thing - (hashnum/arr.length);}
+
             while (i2 < arr[i].length) {
+                if (thing != 0) {randomNumber = random.nextInt(thing) + min;}
+                else if (thing == 0) {randomNumber = 0;}
+
+                if (randomNumber != 0) { val = false;}
+                else {val = true;}
                 if (arr[i][i2].equals("#") && hasBeenReplaced == false){
-                    if (val = true) {
+                    if (val == true) {
                         arr[i][i2] = Integer.toString(modified);
                         hasBeenReplaced = true;
                     }
-                    else if(arr[i][i2].equals("#") && hasBeenReplaced == true) {continue;}
 
                 }
-                i2++;}
+
+                i2++;
+            }
+            
+            
+//styll tryna make this work. hm
         }
         System.out.println(val);
-        System.out.println(hashnum);
+        System.out.println(randomNumber);
+        System.out.println(thing);
         return arr; 
     } 
 
