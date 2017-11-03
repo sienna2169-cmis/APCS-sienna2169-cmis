@@ -15,7 +15,13 @@ public class Fundamentals3 {
                 {3, 7, 8, 4, 7},
                 {1, 1, 9, 0, 2},
                 {2, 4, 2, 7, 2},
-                {7, 5, 9, 4, 3}};      
+                {7, 5, 9, 4, 3}}; 
+        double[][] array3 =  {  
+                {0, 2, 6, 1, 1},
+                {3, 7, 8, 4, 7},
+                {1, 1, 9, 0, 2},
+                {2, 4, 2, 7, 2},
+                {7, 5, 9, 4, 3}};  
         String[][] checkerboardArray = {
                 {"#", " ", "#", " ", "#", " ", "#", " "},
                 {" ", "#", " ", "#", " ", "#", " ", "#"},
@@ -26,18 +32,54 @@ public class Fundamentals3 {
                 {"#", " ", "#", " ", "#", " ", "#", " "},
                 {" ", "#", " ", "#", " ", "#", " ", "#"}  };
 
-        print2DArray(checkerboardArray, false);
+        //print2DArray(checkerboardArray, false);
 
         //initializeArray(array2, 1);
         //print2DArray(array2, true);
 
         //snakePrint(array2);
         locate(checkerboardArray);
-        print2DArray(checkerboardArray, false);
+        print2DArray(checkerboardArray, true);
+
+        print2DArray(replace(array2, 3, 1), true);
+        print2DArray(shift(array3, 2), true);
 
     }
 
     public static void print2DArray(int[][] array, boolean rowMajor) {
+        if (rowMajor == true) {
+            for (int i = 0; i < array.length; i++) {
+                int i2 = 0;
+                while (i2 < array[i].length) {
+                    if (i2 != array[i].length -1) {System.out.format(array[i][i2] + " ");}
+                    else if (i2 == array[i].length -1) {
+                        System.out.format(array[i][i2] + " ");
+                        System.out.println();
+                    }
+                    i2++;
+
+                }
+
+            } 
+        }
+        else if (rowMajor == false) {
+            int rowLength = array[0].length;
+            for (int i2 = 0; i2 < rowLength; i2++){
+                int i = 0;
+                while (i < array.length) {
+                    if (i != array.length - 1) {System.out.format(array[i][i2] + " ");}
+                    if (i == array.length - 1) {
+                        System.out.format(array[i][i2] + " ");
+                        System.out.println();
+                    }
+                    i++;
+                }
+
+            }
+
+        }
+    }
+   public static void print2DArray(double[][] array, boolean rowMajor) {
         if (rowMajor == true) {
             for (int i = 0; i < array.length; i++) {
                 int i2 = 0;
@@ -219,15 +261,59 @@ public class Fundamentals3 {
 
                 i2++;
             }
-            
-            
-//styll tryna make this work. hm
+
         }
+        //styll tryna make this work. hm
+        //eh Im just gonna move on :/
         System.out.println(val);
         System.out.println(randomNumber);
         System.out.println(thing);
         return arr; 
     } 
 
+    public static int[][]  replace(int [][] array, int threshold, int newValue) {
+
+        for (int i = 0; i < array.length; i++){
+            int i2 = 0;
+            while (i2 < array[i].length) {
+                if (array[i][i2] > threshold) {
+                    array[i][i2] = newValue;
+                }
+                i2++;
+            }
+
+        }
+
+        return array;
+    }
+
+    public static double[][] shift(double[][] arr, int row) {
+        int length = arr[0].length;
+        int width = arr.length;
+
+        int min = 0;
+        int max = 10;
+        double[][] copy = new double[width][length];
+
+        Random random = new Random();
+        int randomNumber = random.nextInt(max-min + 1) + min;
+        for (int i = 0; i < width; i++) {
+            int i2 = 0;
+            if (i >= row) {
+                while (i2 < length) {
+                    randomNumber = random.nextInt(max-min + 1) + min;
+                    if (i != width - 1){arr[i][i2] = copy[i+1][i2];} 
+                    else if (i == width - 1){
+                    
+                    copy[row][i2] = randomNumber;}
+                    
+                    i2++;
+                }
+
+            }
+
+        }
+        return arr;
+    }
 }
 
