@@ -302,7 +302,7 @@ public class Fundamentals3 {
             if (i >= row) {
                 while (i2 < length) {
                     randomNumber = random.nextInt(max-min + 1) + min;
-                    if (i != width - 1){arr[i][i2] = copy[i+1][i2];} 
+                    if (i != width - 1){ copy[i+1][i2] = arr[i][i2] ;} 
                     else if (i == width - 1){
                     
                     copy[row][i2] = randomNumber;}
@@ -311,9 +311,17 @@ public class Fundamentals3 {
                 }
 
             }
+            
+            else if (i != row) {
+            while (i2 < length) {
+            copy[i][i2] = arr[i][i2];
+            i2++;
+            }
+                
+            }
 
         }
-        return arr;
+        return copy;
     }
 }
 
