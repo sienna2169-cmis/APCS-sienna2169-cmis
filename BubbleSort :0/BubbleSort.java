@@ -28,20 +28,36 @@ public class BubbleSort
         //ok yeah this does NOT work correctly
         //how about this: for loop in for loop. for loop is activated if its greater, only continues then
         for (int i = 0; i < array.length; i++) {
-            boolean higherYesNo = false;
-            for (int i2 = i; i2 < array.length - i; i2++){
-            if (array[i2] < array[i2+1]){
-            complete[i2+1] = array[i2];
+            
+            if ( i != array.length - 1) {
+            if (array[i] > array[i+1]){
+            complete[i+1] = array[i];
+            complete[i] = array[i+1];
             }
-            else if (array[i2] < array[i2+1] || i2 == array.length - i - 1) {
-            continue;
+            else if (array[i] < array[i+1]) {
+            complete[i] = array[i];
+            complete[i+1] = array[i+1];
+            }
+        }
+        
+        else if (i == array.length - 1) {
+            if (array[i] > array[i-1]) {
+            complete[i] = array[i];}
+            else if (array[i] < array[i-1] ) {
+            complete[i] = array[i-1];
+            complete[i-1] = array[i];
             }
             }
 
         }
         //UGH outofbounds exception -_________-
         for (int i2 = 0; i2 < array.length; i2++) {
-            complete[i2] = array[i2];
+            array[i2] = complete[i2];
         }
+        //OK NO
+        //THIS DOESNT WORK
+        //HUI
+        //HUI
+        //gotta...cycle...through..
     }
 }
