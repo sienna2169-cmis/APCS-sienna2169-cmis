@@ -18,6 +18,29 @@ public class SelectionSort
     }
 
     public static void sort(int[] array){
-    
+        int lowest;
+        int indexLeast;
+        for (int i = 0; i < array.length -1 ; i++) {
+            lowest = array[i];
+            indexLeast = i;
+            for (int i2 = 0; i2 < array.length; i2++) {
+                
+                if (array[i2] < lowest ) {
+                    lowest = array[i2];
+                    //array[i2] = array[indexLeast];
+                    
+                    //indexLeast = i2;
+                    
+                    
+                    
+                    
+                    
+                }
+                
+            }
+            array[indexLeast] = lowest;
+            
+
+        }
     }
 }
