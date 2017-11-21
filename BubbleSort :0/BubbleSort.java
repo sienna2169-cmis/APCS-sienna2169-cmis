@@ -26,23 +26,20 @@ public class BubbleSort
     public static void sort(int[] array){
         int[] complete = new int[array.length];
         boolean higherYes = true;
+        int current;
         //ok yeah this does NOT work correctly
         //how about this: for loop in for loop. for loop is activated if its greater, only continues then
-        for (int i = 0; i < array.length ; i++) {
-       
-       for (int i2 = i + 1; i2< array.length ; i2++){
-       if (array[i2] < array[i] ) {
-        array[i] = array[i2];
-        array[i2] = array[i];
-        }
-       else if (array[i2] > array[i] ) {
-        array[i] = array[i];
-        array[i2] = array[i2];
-        }
-       
-    }}
-    
-    //for (int i2 = 0; i2 < array.length; i2++) {
-       //     array[i2] = complete[i2];
-       // }
-}}
+        for (int i = array.length -1; i > 0 ; i--) {
+
+            for (int i2 = 0; i2< i; i2++){
+                if (array[i2] < array[i2 + 1] ) {
+                    current = array[i2];
+                    array[i2] = array[i2 + 1];
+                    array[i2 + 1] = current;
+
+                }
+            }
+            //for (int i2 = 0; i2 < array.length; i2++) {
+            //     array[i2] = complete[i2];
+            // }
+        }}}
