@@ -9,7 +9,7 @@ public class Recursive
 {
     public static void main(String[] args) {
         //System.out.println(Pow(2, 2));
-        System.out.println(grid(3, 5, "$"));
+        System.out.println(grid(3, 3, "$"));
 
     }
 
@@ -25,7 +25,6 @@ public class Recursive
         }
         else if (exp > 0) {
 
-        
             return num * Pow(num, exp - 1);
         }
         else {
@@ -38,7 +37,7 @@ public class Recursive
         if (w == 0 || h == 0) {
             return "";
         }
-        if (h > w) {
+        if (h >= w) {
             if (h > 0) {
                 if (w > 0) {
                     return symbol  +  grid(w, h - 1, symbol + "\n" + grid(w-1, h, symbol )  );
@@ -47,16 +46,17 @@ public class Recursive
 
             }}
         else if (w > h) {
-            if (w > 0) {
-                if (h > 0) {
-                    return symbol  +  grid(w -1, h, symbol + "\n" + grid(w, h -1, symbol )  );
+            //if (w > 0) {
+                //if (h > 0) {
+                  //  return symbol  +  grid(w -1, h, symbol + "\n" + grid(w, h -1, symbol )  );
 
-                }
+               // }
 
             }
+            return "wah";
         }
 
-        return "wah";
+        
     }
 
-}
+
