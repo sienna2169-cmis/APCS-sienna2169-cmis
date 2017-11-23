@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Recursive
+comment0.text=\n\ Write\ a\ description\ of\ class\ Recursive\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=num\ exp
+comment2.target=int\ Pow(int,\ int)
+comment2.text=\n\ Constructor\ for\ objects\ of\ class\ Recursive\n
+numComments=3
