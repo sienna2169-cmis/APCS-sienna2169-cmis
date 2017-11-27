@@ -10,7 +10,8 @@ public class Recursive
     public static void main(String[] args) {
         //System.out.println(Pow(2, 2));
         //System.out.println(grid(3, 3, "$"));
-        System.out.println(mul(3, 3));
+        //System.out.println(mul(3, 3));
+        System.out.println(binToDec("01"));
 
     }
 
@@ -58,7 +59,31 @@ public class Recursive
     }
     
     }
-        
+    public static int binToDec(String b){
+    int count = b.length();
+    int length = 0;
+    
+    
+    int base = b.charAt(count - 1);
+    if (base == 1) {
+    base = Pow(base * 2, length + 1);
+    
     }
+    else if (base == 0) {
+    base = Pow(base * 2, length + 1);
+    }
+    
+    return base + binToDec(b.substring(0, b.length() -1));
+    
+    
+    
+    
+    
+    
+    //else {return 0;}
+    
+}}
+        
+    
 
 
