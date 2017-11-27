@@ -9,7 +9,8 @@ public class Recursive
 {
     public static void main(String[] args) {
         //System.out.println(Pow(2, 2));
-        System.out.println(grid(3, 3, "$"));
+        //System.out.println(grid(3, 3, "$"));
+        System.out.println(mul(3, 3));
 
     }
 
@@ -45,17 +46,18 @@ public class Recursive
                 }
 
             }}
-        else if (w > h) {
-            //if (w > 0) {
-                //if (h > 0) {
-                  //  return symbol  +  grid(w -1, h, symbol + "\n" + grid(w, h -1, symbol )  );
-
-               // }
-
-            }
+       
             return "wah";
         }
-
+    public static int mul(int x, int y){
+    if (y != 0) {
+    return x += mul(x, y-1);
+    }
+    else {
+    return 0;
+    }
+    
+    }
         
     }
 
