@@ -11,7 +11,7 @@ public class Recursive
         //System.out.println(Pow(2, 2));
         //System.out.println(grid(3, 3, "$"));
         //System.out.println(mul(3, 3));
-        System.out.println(binToDec("01"));
+        System.out.println(binToDec("1101"));
 
     }
 
@@ -47,43 +47,46 @@ public class Recursive
                 }
 
             }}
-       
-            return "wah";
-        }
-    public static int mul(int x, int y){
-    if (y != 0) {
-    return x += mul(x, y-1);
-    }
-    else {
-    return 0;
-    }
-    
-    }
-    public static int binToDec(String b){
-    int count = b.length();
-    int length = 0;
-    
-    
-    int base = b.charAt(count - 1);
-    if (base == 1) {
-    base = Pow(base * 2, length + 1);
-    
-    }
-    else if (base == 0) {
-    base = Pow(base * 2, length + 1);
-    }
-    
-    return base + binToDec(b.substring(0, b.length() -1));
-    
-    
-    
-    
-    
-    
-    //else {return 0;}
-    
-}}
-        
-    
 
+        return "wah";
+    }
+
+    public static int mul(int x, int y){
+        if (y != 0) {
+            return x += mul(x, y-1);
+        }
+        else {
+            return 0;
+        }
+
+    }
+
+    public static int binToDec(String b){
+        int count = b.length();
+        int length = b.length() -1;
+
+        if (count != 0) {
+            String base = (b.substring(count));
+            int base2 = Integer.parseInt(base);
+           
+            base2 = Pow(base2 * 2, length);
+            return base2+ binToDec(b.substring(0, b.length() -1));
+                
+            
+           
+
+        }
+
+        else {return 0;}
+        
+        //suddenly broke it wtf
+        
+
+    
+    
+        //else {return 0;}
+    }
+
+} 
+    
 
