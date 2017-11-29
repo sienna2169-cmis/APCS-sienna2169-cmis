@@ -11,7 +11,7 @@ public class Recursive
         //System.out.println(Pow(2, 2));
         //System.out.println(grid(3, 3, "$"));
         //System.out.println(mul(3, 3));
-        System.out.println(binToDec("1101"));
+        System.out.println(binToDec("11"));
 
     }
 
@@ -62,31 +62,34 @@ public class Recursive
     }
 
     public static int binToDec(String b){
-        int count = b.length();
-        int length = b.length() -1;
-
-        if (count != 0) {
-            String base = (b.substring(count));
-            int base2 = Integer.parseInt(base);
-           
-            base2 = Pow(base2 * 2, length);
-            return base2+ binToDec(b.substring(0, b.length() -1));
-                
+        int count = b.length() - 1;
+        int base2 = 1;
+        if (count >= 0) {
             
-           
+            if (b.charAt(0) == '1') {
+                 base2 = Pow( 2, count);
+                return base2+ binToDec(b.substring(1, b.length() ));}
+
+            else if (b.charAt(0) == '0'){
+
+                return 0 + binToDec(b.substring(1, b.length() ));
+            }
+            else if (count == 0) {
+                return 1 + binToDec(b.substring(1, b.length()));
+            }
+            else {return binToDec(b.substring(1, b.length() )); }
+
 
         }
 
-        else {return 0;}
-        
+        else {
+            
+            return 0;}
         //suddenly broke it wtf
-        
 
-    
     
         //else {return 0;}
     }
 
 } 
-    
 
