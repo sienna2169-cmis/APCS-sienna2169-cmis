@@ -97,5 +97,28 @@ public class Recursive
     else {return "";}
     
     }
+    
+    public static String remove(String s, String t) {
+    String returnString;
+    int left = s.length();
+    
+    if (left != 0) {
+    returnString = s.substring(left-1);
+    if (returnString.equals(t)) {
+    return remove(s.substring(0, left -1), t);
+    
+    }
+    else if (returnString.equals(t) == false) {
+    return remove(s.substring(0, left -1), t) + returnString;}
+    
+    else {return s;}
+    
+    
+    }
+
+    else {return s;}
+    
+    
+    }
 } 
 
