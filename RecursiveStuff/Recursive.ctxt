@@ -16,4 +16,6 @@ comment6.params=s
 comment6.target=java.lang.String\ reverse(java.lang.String)
 comment7.params=s\ t
 comment7.target=java.lang.String\ remove(java.lang.String,\ java.lang.String)
-numComments=8
+comment8.params=s\ t\ r
+comment8.target=java.lang.String\ replace(java.lang.String,\ java.lang.String,\ java.lang.String)
+numComments=9

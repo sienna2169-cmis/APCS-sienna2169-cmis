@@ -120,5 +120,25 @@ public class Recursive
     
     
     }
+    
+    public static String replace(String s, String t, String r) {
+    
+    String returnString;
+    int left = s.length();
+    
+    if (left != 0) {
+    returnString = s.substring(left-1);
+    if (returnString.equals(t)) {
+    return replace(s.substring(0, left-1), t, r) + r;
+    }
+    else if (returnString.equals(t) == false) {
+    return replace(s.substring(0, left -1), t, r) + returnString;}
+    
+    else {return s;}
+    
+    }
+    
+    else {return s;}
+    }
 } 
 
