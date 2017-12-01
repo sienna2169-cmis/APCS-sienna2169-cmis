@@ -65,7 +65,7 @@ public class Recursive
         int count = b.length() - 1;
         int base2 = 1;
         if (count >= 0) {
-            
+
             if (b.charAt(0) == '1') {
                  base2 = Pow( 2, count);
                 return base2+ binToDec(b.substring(1, b.length() ));}
@@ -79,17 +79,23 @@ public class Recursive
             }
             else {return binToDec(b.substring(1, b.length() )); }
 
-
         }
-
         else {
-            
             return 0;}
-        //suddenly broke it wtf
-
-    
-        //else {return 0;}
+        
     }
-
+    public static String reverse(String s) {
+    String returnString;
+    int left = s.length() ;
+    if (left != 0) {
+    returnString = s.substring(left -1);
+    System.out.print(returnString);
+    return returnString + reverse(s.substring(0, left - 1));
+    
+    }
+    
+    else {return "";}
+    
+    }
 } 
 
