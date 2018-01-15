@@ -7,10 +7,10 @@
 public class MergeSort
 {
     public static void main(String[] args) {
-        int[] numbers = {1, 5, 5, 7, 9, 3};
+        int[] numbers = {1, 5, 5, 7, 9, 3,4};
         print(mergeSort(numbers)); 
-
     }  
+
     public static void print(int[] array){
         for(int i : array){
             System.out.println(i);
@@ -22,12 +22,10 @@ public class MergeSort
         int[] piece;
         if (splitArr.length % 2 != 0 && whichHalf == false) { piece = new int[(splitArr.length/2) + 1];}
         else {piece = new int[(splitArr.length/2)];}
-
         if (whichHalf == true) {
             for (int i = 0; i < (splitArr.length/2); i++) {
                 piece[i] = splitArr[i];
             }
-
         }
         else if (whichHalf == false) {
             int i2 = splitArr.length/2;
@@ -51,28 +49,29 @@ public class MergeSort
         int[] sorted = new int[arr1.length + arr2.length];
         int i2 = 0;
         int i3 = 0;
-
         for (int i = 0; i < sorted.length; i++) {
-   
-            if (arr1[i2] <= arr2[i3] && i2 != arr1.length -1) {
-                sorted[i] = arr1[i2];
-                i2++;
-            }
-            else if (arr1[i2] > arr2[i3] && i3 != arr2.length -1) {
-                sorted[i] = arr2[i3];
-                i3++;
-            }
-            else if (arr1[i2] <= arr2[i3] && i2 == arr1.length -1) {
-                sorted[i] = arr1[i2];
+            if (!(i2 == arr1.length  && i3 == arr2.length )) {
+                if (i2 == arr1.length) {
+                    sorted[i] = arr2[i3];
+                    i3++;
+                }
+                else if (i3 == arr2.length) {
+                    sorted[i] = arr1[i2];
+                    i2++;
+                }
+                else{ 
+                    if (arr1[i2] <= arr2[i3]) {
+                        sorted[i] = arr1[i2];
+                        i2++;
 
+                    }
+                    else  {
+                        sorted[i] = arr2[i3];
+                        i3++;
+
+                    }
+                }
             }
-            else if (arr1[i2] > arr2[i3] && i3 ==arr2.length -1) {
-                sorted[i] = arr2[i3];
-
-            }
-
-    
-
         }
         return sorted;
     }
