@@ -1,13 +1,13 @@
 /**
- * Write a description of class MergeSort here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * it merges, and sorts. voila. its also recursive wow. 
+ * basically it splits until you can't split anymore (recursion!), then merges
+ * Sienna :D
+ * version uhm. 1
  */
 public class MergeSort
 {
     public static void main(String[] args) {
-        int[] numbers = {1, 5, 5, 7, 9, 3,4};
+        int[] numbers = {1, 7, 5, 7, 9, 3,4};
         print(mergeSort(numbers)); 
     }  
 
@@ -86,4 +86,6 @@ public class MergeSort
         }
         else {return inputArr;}
     }
+
+    //Sienna is DONE. take THAT confusing recursion. Hah.
 }
