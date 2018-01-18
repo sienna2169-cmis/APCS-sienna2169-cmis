@@ -10,13 +10,15 @@ public abstract class Robot extends Actor
     private final int[] data;
     private boolean canSetLocation = true;
 
-    public Robot(Color color){
+    public Robot(Color COLOR, int d){
         data = new int[10];
         moved = false;
         stuck = false;
-        img = new GreenfootImage(5,5);
-        img.setColor(color);
+        img = new GreenfootImage(d,d);
+        img.setColor(COLOR);
         img.fill();
+        img.setColor(Color.BLACK);
+        img.drawRect(0,0,d-1,d-1);
         setImage(img);
         init();
     }
@@ -108,8 +110,8 @@ public abstract class Robot extends Actor
         moved = false;
         oldX = getX();
         oldY = getY();
+        
         behave(); //Abstract method implemented in subclass.
-
         if(isTouching(Barrier.class)){
             System.out.println("ouch!");
             super.setLocation(oldX, oldY);
@@ -121,10 +123,9 @@ public abstract class Robot extends Actor
 
         if(isTouching(Goal.class)){
             MyWorld w = (MyWorld) getWorld();
-            w.finishRound(this);
+            w.win(this);
 
         }
-
     }    
 
     protected final void addedToWorld(World w){

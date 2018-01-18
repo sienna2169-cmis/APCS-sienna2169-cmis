@@ -1,9 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class SiennaIMPROVED extends Robot
+public class RobotTemplate extends Robot
 {
-    public SiennaIMPROVED(){
-        super(Color.black);
+    public RobotTemplate(int d){
+        super(Color.RED, d);
     }
     
     public void init(){
@@ -22,8 +22,11 @@ public class SiennaIMPROVED extends Robot
      * isClearDown() => true means no block down
      * getX() => returns x coordinate of robot
      * getY() => returns y coordinate of robot 
+     * public final int[] getData() => returns array of int data
+     * public final int getData(int idx) => returns int data from index idx
+     * public final void setData(int idx, int value) => sets value of data array at idx
+     * public final void setData(int[] newData) => replaces values in data array with values in newData
      */
     public void behave(){
-        
     }
 }
