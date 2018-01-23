@@ -1,4 +1,12 @@
 #BlueJ class context
 comment0.target=Crab
 comment0.text=\n\ Write\ a\ description\ of\ class\ Crab\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
-numComments=1
+comment1.params=_name
+comment1.target=Crab(java.lang.String)
+comment2.params=gender
+comment2.target=Crab(boolean)
+comment3.params=_size
+comment3.target=Crab(double)
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5
