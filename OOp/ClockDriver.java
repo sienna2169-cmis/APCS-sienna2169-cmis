@@ -13,11 +13,12 @@ public class ClockDriver
     Clock kitchenClock = new Clock();
     System.out.println(kitchenClock.toString());
     
-    int t1;
-    int t2;
-    int t3;
-    Clock c2 = new Clock(1import javax.swing.JOptionPane);
-    System.out.println(c2.toString());
+    String t1;
+    t1 = JOptionPane.showInputDialog("What is the hour?");
+    String t2 = JOptionPane.showInputDialog("What is the minutes?");
+    String t3 = JOptionPane.showInputDialog("What is the seconds?");
     
-    }}
-
+    Clock bedroomClock = new Clock (Integer.parseInt(t1), Integer.parseInt(t2), Integer.parseInt(t3));
+    System.out.println(bedroomClock.toString());
+    }
+}
