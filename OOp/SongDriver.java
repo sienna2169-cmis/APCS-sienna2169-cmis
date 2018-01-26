@@ -5,7 +5,7 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Program
+public class SongDriver
 {
    public static void main(String[] args) {
     //Crab b = new Crab("joel");
