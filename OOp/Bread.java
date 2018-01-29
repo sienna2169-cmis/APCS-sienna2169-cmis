@@ -17,12 +17,14 @@ public class Bread
         price = 0.0;
 
     }
+
     public Bread(String type_, int slice, double price_) {
-    this.type = type_;
-    this.sliceNum = slice;
-    this.price = price_;
-    
+        this.type = type_;
+        this.sliceNum = slice;
+        this.price = price_;
+
     }
+
     public String toString(){
         String out = "";
         out += "Bread type: " + type + "\n";
