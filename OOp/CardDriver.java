@@ -40,12 +40,13 @@ public class CardDriver
                 }
                 else if (n == 1) {
                     val = "A";
-                    actual = 1;
+                    actual = 11;
                 }
 
             }
             else if (n > 1 && n < 11) {
                 val = Integer.toString(n);
+                actual = n;
             }
 
             if (s == 1) {suit_ = "Hearts";}
@@ -55,7 +56,7 @@ public class CardDriver
 
             Card card = new Card(suit_, val, actual);
             hand[i] = card;
-            System.out.println(card.toString());
+            //System.out.println(card.toString());
             
         }
         return hand;

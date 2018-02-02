@@ -38,7 +38,7 @@ public class Card
 
     public String toString(){
         String out = "";
-        out += "The " + num + " of " + suit + "\n";
+        out += "The " + num + " of " + suit ;
         return out;
     }
 }
