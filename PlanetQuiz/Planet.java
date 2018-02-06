@@ -19,7 +19,7 @@ public class Planet
         diameter = 5.0 + Math.random() * (100.0 - 5.0);
         moons = 0 + (int)(Math.random() * ((10 - 0) + 1));
         double rando2 = Math.random();
-        if (rando2 >= 0.75 ) {
+        if (rando2 <= 0.75 ) {
             hasRings = true;
         }
     }
