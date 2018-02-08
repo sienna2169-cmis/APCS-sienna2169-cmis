@@ -12,21 +12,19 @@ public class Crab
    private double size;
    private boolean isMale;
    
-   public Crab(String _name){
+   
+    Crab(String _name, int _age, double _size, boolean gender){
     this.name = _name;
-    }
-   public Crab(boolean gender) {
-    this.isMale = gender;
-    }
-   public Crab(double _size) {
     if (this.size < 0) {
     _size = 0.0;
     }
     else {
     this.size = _size;
     }
-    
+    this.isMale = gender;
+    this.age = _age;
     }
+  
     public String getName() {
     return this.name;
     }
@@ -52,11 +50,32 @@ public class Crab
     this.isMale = _isMale;   
     }
     
+    public double getChop() {
+    return this.size /2;
+    }
+    
+    public String getKnighted() {
+    return "Sir " + this.name;
+    }
+    
+    public int getYouth() {
+    return this.age - (int)(Math.random() * this.age);
+    }
+    
+    public boolean hormoneTreatment() {
+    return !(this.isMale);
+    }
     public String toString(){
     String out = "";
-    out += "name:" + name + "\n";
+    out += "Name:" + name + "\n";
     out += "Age:" + age + "\n";
-    out += "Height:" + size + "\n";
+    out += "Size:" + size + "cm" + "\n";
+    if (isMale == true) {
+    out += "Gender: Male" + "\n";
+    }
+    else {
+    out += "Gender: Female" + "\n";
+    }
     return out;
     
     }

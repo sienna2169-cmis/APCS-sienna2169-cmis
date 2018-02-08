@@ -13,10 +13,12 @@ public class CrabDriver
     /**
      * Constructor for objects of class CrabDriver
      */
-    public CrabDriver()
-    {
-        // initialise instance variables
-        x = 0;
+    
+        public static void main(String[] args) {
+        Crab c1 = new Crab("joel", 2, 4.0, true);
+       
+        System.out.println(c1.toString());
+        System.out.println(c1.getKnighted());
     }
 
     /**
@@ -30,4 +32,5 @@ public class CrabDriver
         // put your code here
         return x + y;
     }
+   
 }
