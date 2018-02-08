@@ -27,6 +27,31 @@ public class Crab
     }
     
     }
+    public String getName() {
+    return this.name;
+    }
+    public int getAge() {
+    return this.age;
+    }
+    public double getSize() {
+    return this.size;
+    }
+    public boolean maleOr() {
+    return this.isMale;
+    }
+    public void setName(String _name) {
+    this.name = _name;
+    }
+    public void setAge(int _age) {
+    this.age = _age;
+    }
+    public void setSize(double _size) {
+    this.size = _size;
+    }
+    public void setGender(boolean _isMale) {
+    this.isMale = _isMale;   
+    }
+    
     public String toString(){
     String out = "";
     out += "name:" + name + "\n";
