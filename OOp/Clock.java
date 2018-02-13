@@ -33,8 +33,8 @@ public class Clock
     this.seconds = second;
     }
     
-    public int convertDaylightSaving(int hours) {
-    int time = 0;
+    public int convertDaylightSaving(int hours_) {
+    int time = this.hours + hours_;
     
     return time;
     }
