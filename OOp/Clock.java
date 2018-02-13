@@ -27,6 +27,17 @@ public class Clock
     this.minutes = _minutes;
     this.seconds = _seconds;
     }
+    public void setTime (int hour, int minute, int second) {
+    this.hours = hour;
+    this.minutes = minute;
+    this.seconds = second;
+    }
+    
+    public int convertDaylightSaving(int hours) {
+    int time = 0;
+    
+    return time;
+    }
     public String toString(){
     String object = "The time is " + hours + ":" + minutes + ":" + seconds ;
     return object;
