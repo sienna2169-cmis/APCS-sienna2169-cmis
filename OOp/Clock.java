@@ -38,8 +38,15 @@ public class Clock
     
     return time;
     }
+    public int totalSeconds(){
+    int hoursToMin = this.hours * 60;
+    int minsToSeconds = (this.minutes + hoursToMin) * 60;
+    int totalSeconds = this.seconds + minsToSeconds;
+    
+    return totalSeconds;}
     public String toString(){
-    String object = "The time is " + hours + ":" + minutes + ":" + seconds ;
+    String object = "The time is " + hours + ":" + minutes + ":" + seconds + "\n" ;
+    object += "Total seconds: " + totalSeconds() + "\n";
     return object;
     }
 
