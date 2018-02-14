@@ -22,5 +22,8 @@ public class ClockDriver
 
         Clock bedroomClock = new Clock (Integer.parseInt(t1), Integer.parseInt(t2), Integer.parseInt(t3));
         System.out.println(bedroomClock.toString());
+        
+        bedroomClock.convertDaylightSaving(-1);
+        System.out.println(bedroomClock.toString());
     }
 }
