@@ -12,6 +12,8 @@ public class ClockDriver
     public static void main(String[] args) {
     Clock kitchenClock = new Clock();
     System.out.println(kitchenClock.toString());
+    kitchenClock.setTime(11, 34, 30);
+    System.out.println(kitchenClock.toString());
     
     String t1;
     t1 = JOptionPane.showInputDialog("What is the hour?");
