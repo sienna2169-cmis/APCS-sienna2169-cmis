@@ -21,8 +21,8 @@ public class MyPod
         color = "black";
         memory = 4;
         
-        for (int i = 0; i < songLibrary.length; i++) {
-        songLibrary[i] = "white noise";
+        for (String song : songLibrary) {
+        song = "white noise";
         
         }
        
@@ -40,8 +40,8 @@ public class MyPod
     }    
     public String toString() {
     String object = "iPod Color: " + color + 
-    "\n" + "Memory: " + memory + " GB" + "\n" + "Library: " + "\n" + 
-    songLibrary[1] + "\n" + songLibrary[2] + "\n" + songLibrary[3] + "\n";
+    "\nMemory: " + memory + " GB" + "\nSong Library: " + "\n" + 
+    songLibrary[0] + "\n" + songLibrary[1] + "\n" + songLibrary[2] + "\n";
     
     return object;
 }
