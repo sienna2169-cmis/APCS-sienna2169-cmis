@@ -15,7 +15,7 @@ public class ClockStore
     store1.clocksInStock[1] = new Clock(02, 44, 17);
     store1.clocksInStock[2] = new Clock(13,05, 51);
     
-    
+    System.out.println(store1.toString());
     }
     int mostSeconds(){
      int highestNum = 0;
@@ -28,6 +28,15 @@ public class ClockStore
         
         }
     return highestIndex;
+    }
+    
+    public String toString() {
+    String object = "";
+    for (Clock c : this.clocksInStock) {
+    object += "Clock Option:\n" + c.toString();
+    }
+    
+    return object;
     }
     }
 
