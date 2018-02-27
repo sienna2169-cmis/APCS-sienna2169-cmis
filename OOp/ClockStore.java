@@ -18,8 +18,16 @@ public class ClockStore
     
     }
     int mostSeconds(){
-    
-    return 1;
+     int highestNum = 0;
+     int highestIndex = 0;
+     for (int i = 0; i < clocksInStock.length; i++) {
+        if (this.clocksInStock[i].totalSeconds() > highestNum) {
+        highestIndex = i;
+        highestNum = this.clocksInStock[i].totalSeconds();
+        }
+        
+        }
+    return highestIndex;
     }
     }
 

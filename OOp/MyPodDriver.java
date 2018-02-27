@@ -8,10 +8,17 @@
 public class MyPodDriver
 {
     public static void main(String[] args) {
-    String[] songs = new String[] {"Black", "Careless Whisper", "Piano Man"};
+    Song[] songs = new Song[3];
+    songs[0] = new Song();
+    songs[1] = new Song();
+    songs[2] = new Song();
+    
     MyPod carPod = new MyPod("White", 6, songs);
     
-    String[] songs2 = new String[] {"Confusion", "Apple Tree", "Champion"};
+    Song[] songs2 = new Song[3];
+    songs2[0] = new Song();
+    songs2[1] = new Song();
+    songs2[2] = new Song();
     MyPod myPod = new MyPod("Pink", 4, songs2);
     
     MyPod[] pods = new MyPod[2];
