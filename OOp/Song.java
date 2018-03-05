@@ -24,21 +24,29 @@ public class Song
     static final String password = "ChocoLate";
     
     public Song() {
-        length = 0.0;
-        name = "";
-        chartNum = 0;
+        this("Name");
     }
-
-    public Song(String _name, double _length, int _chartNum, int yearReleased_){
-        this.name = _name;
+    
+    public Song(String name) {
+    this(name, 2);
+    }
+    public Song(String name, int chartNum) {
+    this(name, chartNum, 1977);
+    }
+    public Song(String name, int chartNum, int yearReleased){
+    this(name, chartNum, yearReleased, 2.35);
+    
+    }
+    public Song(String name, int chartNum, int yearReleased, double length) {
+    this.name = name;
         if (this.length < 0) {
             length = 0.0;
         }
         else {
-            this.length = _length;
+            this.length = length;
         }
-        this.chartNum = _chartNum;
-        this.yearReleased = yearReleased_;
+        this.chartNum = chartNum;
+        this.yearReleased = yearReleased;
     }
 
     public String toString(){
