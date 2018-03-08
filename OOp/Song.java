@@ -58,6 +58,7 @@ public class Song
         return out;
 
     }
+    
     public  int getYearReleased(){
     return yearReleased;
     

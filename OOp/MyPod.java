@@ -11,7 +11,7 @@ public class MyPod
     // instance variables - replace the example below with your own
     private String color = "black";
     private int memory = 4;
-    private ArrayList<Song> songs = new ArrayList<Song>(3);
+    private ArrayList<Song> songs = new ArrayList<Song>(4);
     
 
     /**
@@ -25,17 +25,19 @@ public class MyPod
     public MyPod(String color_, int memory_, ArrayList<Song> songs_){
         this.color = color_;
         this.memory = memory_;
-        for (Song song : songs) {
-            this.songs = songs_;
+        for (Song song : songs_) {
+            this.songs.add(song);
 
         }
 
     }    
     public String toString() {
         String object = "iPod Color: " + color + 
-            "\nMemory: " + memory + " GB" + "\nSong Library: " + "\n" + 
-            "\n";
-
+            "\nMemory: " + memory + " GB" + "\nSong Library: " + "\n";
+            for (Song song : songs) {
+            object += song.toString() + "\n";
+            }
+      
         return object;
     }
 

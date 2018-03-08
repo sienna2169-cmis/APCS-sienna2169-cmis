@@ -9,7 +9,7 @@ import java.util.*;
 public class MyPodDriver
 {
     public static void main(String[] args) {
-        ArrayList<Song> songs1 = new ArrayList<Song>(3);
+        ArrayList<Song> songs1 = new ArrayList<Song>();
         songs1.add(new Song("pink", 2));
         songs1.add(new Song("apple tree", 20));
         songs1.add(new Song("back in black", 3));
@@ -24,10 +24,10 @@ public class MyPodDriver
         pods[0] = carPod;
         pods[1] = myPod;
 
-        for (MyPod pod : pods) {
+       for (MyPod pod : pods) {
             System.out.println(pod.toString());
             System.out.println();
         }
-
+       
     }
 }
