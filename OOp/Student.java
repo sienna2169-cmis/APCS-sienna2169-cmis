@@ -22,12 +22,18 @@ public class Student
             this.grades[i] = 0.0;
         }
     }
-
+    public String getLastName(){
+    return this.lastName;
+    }
     public void getGPA2() {
         this.gpa = calcGPA();
 
     }
-
+    
+    public Student(String name1, String name2){
+    this.firstName = name1;
+    this.lastName = name2;
+    }
     public Student(String name1, String name2, int grade_, double gpa_, double english, double math, double science, double fineArts, double socialScience){
         this.firstName = name1;
         this.lastName = name2;
