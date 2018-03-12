@@ -10,13 +10,11 @@ import java.util.concurrent.ThreadLocalRandom;
 import java.util.*;
 
 
-
 public class Fundamentals
 { 
 
     public static void main(String[] args) {
-     
-     
+
         int c2 = 4;
         int c3 = 7;
         int c4 = 12;
@@ -109,12 +107,12 @@ public class Fundamentals
         System.out.println(pyramid(3));
         System.out.println(pyramid(7));
 
+        //CHECKERBOARD!!
+
         System.out.println(checkerboard(3,3));
         System.out.println(checkerboard(4,7));
 
-    
     }
-
     public static void dataTypes() {
         byte a = 20;
         System.out.println(a); 
@@ -333,25 +331,24 @@ public class Fundamentals
     }
     // Okay. Here we go. THE HARD ONE
     public static String checkerboard(int h, int w) {
-    int totalpixels = (h * w) + 4 + (h * 2) + (w * 2);
-    String thehashs = "";
-    String hashpiece = "";
-    int hashnumber = h*w;
-    double rand = Math.random() * 10.0;
-    int integer = (int)rand;
-   
-   int minimum = 1;
-   int maximum = h;
-   int therow = ThreadLocalRandom.current().nextInt(minimum, maximum + 1);
+        int totalpixels = (h * w) + 4 + (h * 2) + (w * 2);
+        String thehashs = "";
+        String hashpiece = "";
+        int hashnumber = h*w;
+        double rand = Math.random() * 10.0;
+        int integer = (int)rand;
 
+        int minimum = 1;
+        int maximum = h;
+        int therow = ThreadLocalRandom.current().nextInt(minimum, maximum + 1);
 
-int Max = w;
-int Min = 1;
-if (Max % 2 == 0){ --Max;}
-if (Min % 2 == 0) {++Min;}
-int Random_No = Min + 2*(int)(Math.random()*((Max-Min)/2+1));
+        int Max = w;
+        int Min = 1;
+        if (Max % 2 == 0){ --Max;}
+        if (Min % 2 == 0) {++Min;}
+        int Random_No = Min + 2*(int)(Math.random()*((Max-Min)/2+1));
 
-Random random = new Random();
+        Random random = new Random();
         int theLow = 2;
         int theHigh = w;
         int randomNumber = random.nextInt(theHigh-theLow) + theLow;
@@ -359,39 +356,39 @@ Random random = new Random();
             randomNumber = randomNumber + 1;
         }
 
-   String totalwidth = "";
-     for (int i = 1; i < w + 1; i++) {
+        String totalwidth = "";
+        for (int i = 1; i < w + 1; i++) {
             String widthbit = "-";
             totalwidth = totalwidth + widthbit;
         }
         String finalwidth = "+" + totalwidth + "+";
-        
+
         String partofit = "";
         String alltogether = "";
         for (int wi = 1; wi < w + 1; wi++) {
-        if ( wi % 2 == 0) {
-        partofit = "#";
-        }
-        if (wi%2 != 0) {
-        partofit = " ";
-        }
-        alltogether = alltogether + partofit;
+            if ( wi % 2 == 0) {
+                partofit = "#";
+            }
+            if (wi%2 != 0) {
+                partofit = " ";
+            }
+            alltogether = alltogether + partofit;
         }
         String evenrowstr = "|" + alltogether + "|";
-        
+
         String allofem = "";
         String onepart = "";
         for (int wi = 1; wi < w + 1; wi++) {
-        if ( wi % 2 == 0) {
-        onepart = "#";
-        }
-        if (wi%2 != 0) {
-        onepart = " ";
-        }
-        if (wi == randomNumber) {
-        onepart = Integer.toString(integer);
-        }
-        allofem = allofem + onepart;
+            if ( wi % 2 == 0) {
+                onepart = "#";
+            }
+            if (wi%2 != 0) {
+                onepart = " ";
+            }
+            if (wi == randomNumber) {
+                onepart = Integer.toString(integer);
+            }
+            allofem = allofem + onepart;
         }
         String randomevenrowstr = "|" + allofem + "|";
         // HERE. GOTTA GENERATE A RANDOM EVEN NUMBER
@@ -400,55 +397,54 @@ Random random = new Random();
         String oddallofem = "";
         String oddonepart = "";
         for (int wi = 1; wi < w + 1; wi++) {
-        if ( wi % 2 != 0) {
-        oddonepart = "#";
-        }
-        if (wi%2 == 0) {
-        oddonepart = " ";
-        }
-        if (wi == Random_No) {
-        oddonepart = Integer.toString(integer);
-        }
-        oddallofem = oddallofem + oddonepart;
+            if ( wi % 2 != 0) {
+                oddonepart = "#";
+            }
+            if (wi%2 == 0) {
+                oddonepart = " ";
+            }
+            if (wi == Random_No) {
+                oddonepart = Integer.toString(integer);
+            }
+            oddallofem = oddallofem + oddonepart;
         }
         String randomoddrowstr = "|" + oddallofem + "|";
-        
+
         String oddpartofit = "";
         String oddalltogether = "";
         for (int wi = 1; wi < w + 1; wi++) {
-        if ( wi % 2 != 0) {
-        oddpartofit = "#";
-        }
-        if (wi%2 == 0) {
-        oddpartofit = " ";
-        }
-        oddalltogether = oddalltogether + oddpartofit;
+            if ( wi % 2 != 0) {
+                oddpartofit = "#";
+            }
+            if (wi%2 == 0) {
+                oddpartofit = " ";
+            }
+            oddalltogether = oddalltogether + oddpartofit;
         }
         String oddrowstr = "|" + oddalltogether + "|";
-        
+
         String finalrows = "";
         String finalrowpart = "";
         for (int he = 1; he < h + 1; he++) {
-        if (he % 2 == 0) {
-        finalrowpart = evenrowstr;
+            if (he % 2 == 0) {
+                finalrowpart = evenrowstr;
+            }
+            if (he % 2 != 0) {
+                finalrowpart = oddrowstr;
+            }
+            if (he == therow) {
+                if (he % 2 == 0) {finalrowpart = randomevenrowstr;}
+                if (he % 2 != 0) {finalrowpart = randomoddrowstr;}
+            }
+            finalrows = finalrows + finalrowpart + "\n";
         }
-        if (he % 2 != 0) {
-        finalrowpart = oddrowstr;
-        }
-        if (he == therow) {
-        if (he % 2 == 0) {finalrowpart = randomevenrowstr;}
-        if (he % 2 != 0) {finalrowpart = randomoddrowstr;}
-        }
-        finalrows = finalrows + finalrowpart + "\n";
-    }
-    String finalstring = finalwidth + "\n" + finalrows + finalwidth;
+        String finalstring = finalwidth + "\n" + finalrows + finalwidth;
 
-    System.out.println(finalstring);
-   
-    
+        System.out.println(finalstring);
+
 
         return finalstring;
-       
-}
+
+    }
 
 }

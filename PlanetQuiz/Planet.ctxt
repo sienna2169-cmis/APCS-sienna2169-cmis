@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Planet
+comment0.text=\n\ Write\ a\ description\ of\ class\ Planet\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=Planet()
+comment2.params=name_\ diameter_\ moons_\ hasRings_
+comment2.target=Planet(java.lang.String,\ double,\ int,\ boolean)
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+numComments=5

@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=MergeSort
+comment0.text=\n\ it\ merges,\ and\ sorts.\ voila.\ its\ also\ recursive\ wow.\ \n\ basically\ it\ splits\ until\ you\ can't\ split\ anymore\ (recursion\!),\ then\ merges\n\ Sienna\ \:D\n\ version\ uhm.\ 1\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=array
+comment2.target=void\ print(int[])
+comment3.params=splitArr\ whichHalf
+comment3.target=int[]\ split(int[],\ boolean)
+comment4.params=arr1\ arr2
+comment4.target=int[]\ merge(int[],\ int[])
+comment5.params=inputArr
+comment5.target=int[]\ mergeSort(int[])
+numComments=6
