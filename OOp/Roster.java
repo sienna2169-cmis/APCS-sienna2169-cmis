@@ -17,15 +17,17 @@ public class Roster
     
     }
     
-   // public Student findStudentWithMaxGPA() {  
-    //    double maxGPA = 0;
-    //for (Student student : students) {
-    //if (student.calcGPA() > maxGPA) {
-    //
-   // }
-    //} 
-    //}
-   // public String toString() {
-    //return "";
-    //}
+   public Student findStudentWithMaxGPA() {  
+        double maxGPA = 0;
+   for (Student student : students) {
+    if (student.calcGPA() > maxGPA) {
+    maxGPA = student.calcGPA();
+    
+   }}
+   return new Student();
+    
+}
+    public String toString(Student student) {
+    return "Stats of the student with the highest GPA" + "\n" + student.toString();
+    }
 }
