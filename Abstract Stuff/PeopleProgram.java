@@ -9,10 +9,13 @@ public class PeopleProgram
 {
     // instance variables - replace the example below with your own
     public static void main(){
-        System.out.println("PeopleSimulator");
-        Person a = new Teacher();
-        Person b = new ConstructionWorker();
+        //System.out.println("PeopleSimulator");
+        Person a = new Teacher("Charon");
+        a.setName("Janice");
+        Person b = new ConstructionWorker("Mickey");
 
+        System.out.println(a);
+        System.out.println(b);
     }
 
 }
