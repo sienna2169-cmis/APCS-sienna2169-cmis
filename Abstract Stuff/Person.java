@@ -10,7 +10,8 @@ public abstract class Person
 {
     private String name = "John Doe";
     private double energy;
-
+    private int x;
+    private int y;
     public abstract boolean eat(String food) ;
 
     public void setEnergy(double power) {
@@ -35,6 +36,13 @@ public abstract class Person
     }
 
     public String toString(){
-        return "Person Profile\nName: " + this.name + "\n";
+        return "Person Profile\nName: " + name + "\n" + 
+        "Location: " + x + "," + y + "\n";
     }
+    public boolean move(int dx, int dy) {
+    this.x += dx;
+    this.y += dy;
+    return true;
+    }
+    
 }

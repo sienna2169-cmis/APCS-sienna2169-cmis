@@ -16,6 +16,11 @@ public class PeopleProgram
 
         System.out.println(a);
         System.out.println(b);
+        
+        a.move(2,3);
+        System.out.println(a);
+        a.move(7,7);
+        System.out.println(a);
     }
 
 }

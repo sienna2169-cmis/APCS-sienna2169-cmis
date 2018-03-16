@@ -14,7 +14,6 @@ public class ConstructionWorker extends Person
     public boolean eat(String food) {
         boolean success = false;
         if (food.equals("lasagna")) {
-
             setEnergy(getEnergy() + 0.2);
             success = true;
         }

@@ -27,4 +27,12 @@ public class Teacher extends Person
         }
         return (success);
     }
+    public boolean move(int dx, int dy) {
+    if (dx < 4 || dy <4) {
+    super.move(dx,dy);
+    return true;
+    }
+    else {return false;}
+    
+    }
 }

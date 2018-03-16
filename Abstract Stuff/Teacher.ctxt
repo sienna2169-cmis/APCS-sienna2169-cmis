@@ -5,4 +5,6 @@ comment1.params=name
 comment1.target=Teacher(java.lang.String)
 comment2.params=food
 comment2.target=boolean\ eat(java.lang.String)
-numComments=3
+comment3.params=dx\ dy
+comment3.target=boolean\ move(int,\ int)
+numComments=4

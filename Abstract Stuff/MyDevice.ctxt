@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=MyDevice
+comment0.text=\n\ Abstract\ class\ MyDevice\ -\ write\ a\ description\ of\ the\ class\ here\n\n\ @author\ (your\ name\ here)\n\ @version\ (version\ number\ or\ date\ here)\n
+comment1.params=name
+comment1.target=MyDevice(java.lang.String)
+comment2.params=newName
+comment2.target=void\ setName(java.lang.String)
+comment3.params=
+comment3.target=boolean\ charge()
+numComments=4
