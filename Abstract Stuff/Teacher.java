@@ -7,8 +7,10 @@
  */
 public class Teacher extends Person
 {
-    public Teacher(String name) {
+    private double intelligence;
+    public Teacher(String name, double smarts) {
         super(name);
+        this.intelligence = smarts;
     }
 
     public boolean eat(String food) {

@@ -7,8 +7,10 @@
  */
 public class ConstructionWorker extends Person
 {
-    public ConstructionWorker(String name){
+    private double strength;
+    public ConstructionWorker(String name, double strongness){
         super(name);
+        this.strength = strongness;
     }
 
     public boolean eat(String food) {
