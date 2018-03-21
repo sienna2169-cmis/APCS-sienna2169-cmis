@@ -7,10 +7,18 @@
  */
 public class Teacher extends Person
 {
-    private double intelligence;
+    private double teachingAbility;
     public Teacher(String name, double smarts) {
         super(name);
-        this.intelligence = smarts;
+        this.teachingAbility = smarts;
+    }
+
+    public boolean instructWorkout(ConstructionWorker worker){
+        boolean success = false;
+        if (Math.random() > teachingAbility) {
+            success = worker.workOut();
+        }
+        return success;
     }
 
     public boolean eat(String food) {
@@ -29,12 +37,13 @@ public class Teacher extends Person
         }
         return (success);
     }
+
     public boolean move(int dx, int dy) {
-    if (dx < 4 || dy <4) {
-    super.move(dx,dy);
-    return true;
-    }
-    else {return false;}
-    
+        if (dx < 4 || dy <4) {
+            super.move(dx,dy);
+            return true;
+        }
+        else {return false;}
+
     }
 }

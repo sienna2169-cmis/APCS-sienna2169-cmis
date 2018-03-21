@@ -4,4 +4,6 @@ comment0.text=\n\ Write\ a\ description\ of\ class\ CommBadge\ here.\n\n\ @autho
 comment1.params=name
 comment1.target=CommBadge(java.lang.String)
 comment1.text=\n\ Constructor\ for\ objects\ of\ class\ CommBadge\n
-numComments=2
+comment2.params=
+comment2.target=boolean\ charge()
+numComments=3

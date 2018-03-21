@@ -14,6 +14,7 @@ public abstract class Person
     private int y;
     public abstract boolean eat(String food) ;
 
+        
     public void setEnergy(double power) {
         this.energy = power;
     }

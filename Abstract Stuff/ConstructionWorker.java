@@ -13,6 +13,18 @@ public class ConstructionWorker extends Person
         this.strength = strongness;
     }
 
+    public boolean workOut() {
+        boolean success = false;
+        double r = Math.random();
+        if (r > strength) {
+            success = true;
+            strength = r;
+        }
+        return success;
+    }
+    public boolean workOut(Teacher teacher) {
+        return teacher.instructWorkout(this);
+    }
     public boolean eat(String food) {
         boolean success = false;
         if (food.equals("lasagna")) {

@@ -8,7 +8,7 @@
 public class CommBadge extends MyDevice
 {
     // instance variables - replace the example below with your own
-    
+    private boolean chargerWorking;
 
     /**
      * Constructor for objects of class CommBadge
@@ -16,8 +16,15 @@ public class CommBadge extends MyDevice
     public CommBadge(String name)
     {
         super(name);
-       
+       chargerWorking = true;
     }
-
+    public boolean charge(){
+    boolean success = false;
+    if (chargerWorking == true) {
+    success = super.charge();
+    }
+    return success;
+    
+    }
     
 }
