@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=LCD
+comment0.text=\n\ Write\ a\ description\ of\ class\ LCD\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=LCD()
+comment2.params=modelName\ initialPrice
+comment2.target=LCD(java.lang.String,\ double)
+numComments=3
