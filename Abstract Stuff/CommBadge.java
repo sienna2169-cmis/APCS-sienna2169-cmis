@@ -8,7 +8,7 @@
 public class CommBadge extends MyDevice
 {
     // instance variables - replace the example below with your own
-    private boolean chargerWorking;
+    private double broadcastFrequency;
 
     /**
      * Constructor for objects of class CommBadge
@@ -16,15 +16,34 @@ public class CommBadge extends MyDevice
     public CommBadge(String name)
     {
         super(name);
-       chargerWorking = true;
+       
     }
+    public CommBadge(String name, double frequency) {
+    super(name);
+    this.broadcastFrequency = frequency;
+    }
+    
+    public double getFrequency(){
+    return this.broadcastFrequency;
+    }
+    public void setFrequency(double newFrequency) {
+    this.broadcastFrequency = newFrequency;
+    }
+    
     public boolean charge(){
     boolean success = false;
-    if (chargerWorking == true) {
+    if (this.getChargerWorking() == true) {
     success = super.charge();
     }
     return success;
     
+    }
+    
+    public String toString(){
+    
+    String output = super.toString();
+    output += "Commbadge Model: " + getName() + "\n" + "Broadcast Frequency: " + broadcastFrequency + "\n";
+    return output;
     }
     
 }
