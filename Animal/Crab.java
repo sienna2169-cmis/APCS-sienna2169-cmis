@@ -1,5 +1,5 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.*;
 /**
  * Write a description of class Crab here.
  * 
@@ -27,16 +27,16 @@ public boolean eat(Actor food){
         }
         return success;
     }
-    public boolean fight(){
+  public boolean fight(){
         boolean success = false;
     if(isTouching(Starfish.class)){
         if(Math.random() > 0.5) {
         whither();
-       
+        
         }
         else {
         success = true;
-        
+        Starfish.lose();
         }
     }
     return success;
@@ -49,9 +49,9 @@ public boolean eat(Actor food){
     }
 
     public void reproduce(){
-        if(isTouching(Crab.class) && getLifeForce() > 30){
+        if(isTouching(Crab.class) && getLifeForce() > 85){
             World w = getWorld();
-            w.addObject(new Starfish(), getX(), getY());
+            w.addObject(new Crab(), getX(), getY());
             while(getLifeForce() > 25){
                 whither();
             }

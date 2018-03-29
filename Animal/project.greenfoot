@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Wed Mar 28 11:43:33 ICT 2018
+#Thu Mar 29 13:05:04 ICT 2018
 project.charset=UTF-8
 mainWindow.height=600
 version=3.0.0
@@ -10,8 +10,8 @@ world.lastInstantiated=MyWorld
 class.MyWorld.superclass=greenfoot.World
 class.Crab.superclass=Animal
 class.Crab.image=lobster.png
-class.Cherry.image=cherries.png
 mainWindow.y=40
+class.Cherry.image=cherries.png
 mainWindow.x=40
 class.TheBeach.superclass=greenfoot.World
 class.Starfish.superclass=Animal

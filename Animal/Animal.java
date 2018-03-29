@@ -13,15 +13,17 @@ public abstract class Animal extends Actor
      * removeObject
      */
     private int lifeForce;
+   
     public Animal(){
         turn((int)(Math.random() * 360));
         lifeForce = (int)(Math.random() * 70) + 30;
+        
     }
-
+ 
     public final int getLifeForce(){
         return lifeForce;
     }
-
+    
     public abstract boolean eat(Actor food);
 
     public abstract void changePosition();

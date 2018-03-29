@@ -2,6 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Starfish extends Animal
 {
+    private static boolean loser = false;
     public boolean eat(Actor food){
         boolean success = false;
         if(food instanceof Banana){
@@ -20,12 +21,23 @@ public class Starfish extends Animal
         }
         return success;
     }
-
+    
+    public void takeDamage() {
+    whither();
+    }
+    public static void lose(){
+    loser = true;
+    }
+   
     public void changePosition(){
         if(Math.random() > 0.8){
             turn(30 - (int)(Math.random() * 60));
         }
         move(getLifeForce() / 20);
+        
+        if (loser == true) {
+        takeDamage();
+        }
     }
 
     public void reproduce(){
@@ -37,4 +49,7 @@ public class Starfish extends Animal
             }
         }
     }
+    
+    
+    
 }

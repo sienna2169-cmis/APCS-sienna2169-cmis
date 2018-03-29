@@ -15,6 +15,7 @@ public class TheBeach extends World
     public static final int W = 1000;
     public static final int H = 700;
     public static final int NSTARFISH = 5;
+    public static final int NCRAB = 3;
     public TheBeach()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -22,6 +23,9 @@ public class TheBeach extends World
         setPaintOrder(Fruit.class, Animal.class);
         for(int i = 0; i < NSTARFISH; i++){
             addObject(new Starfish(), (int)(Math.random() * W), (int)(Math.random() * H));
+        }
+        for(int i = 0; i < NSTARFISH; i++){
+            addObject(new Crab(), (int)(Math.random() * W), (int)(Math.random() * H));
         }
     }
 
@@ -36,6 +40,7 @@ public class TheBeach extends World
             }
         }
         List<Starfish> allStarfish = getObjects(Starfish.class);
+        List<Crab> allCrabs = getObjects(Crab.class);
         if(allStarfish.size() == 0){
             showText("All the starfish are dead!", W/2, H/2);
             Greenfoot.stop();
