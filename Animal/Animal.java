@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
-public abstract class Animal extends Actor
+public abstract class Animal extends Actor implements Fight
 {
     /**
      * Important Actor methods:

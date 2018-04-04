@@ -7,6 +7,7 @@ import java.util.*;
  * @version (a version number or a date)
  */
 public class Crab extends Animal {
+        private static boolean loser = false;
 public boolean eat(Actor food){
         boolean success = false;
         if(food instanceof Banana){
@@ -27,18 +28,24 @@ public boolean eat(Actor food){
         }
         return success;
     }
+    
+    public static void lose(){
+    loser = true;
+    }
   public boolean fight(){
+     System.out.println("FIGHT!");
         boolean success = false;
-    if(isTouching(Starfish.class)){
+    
         if(Math.random() > 0.5) {
-        whither();
-        
-        }
-        else {
+            System.out.println("Crab's attack is successful!");
         success = true;
         Starfish.lose();
+        System.out.println("Starfish takes a hit!!");
         }
-    }
+        else {
+        System.out.println("Crab's attack failed!!");
+        }
+    
     return success;
     }
     public void changePosition(){
@@ -46,6 +53,9 @@ public boolean eat(Actor food){
             turn(30 - (int)(Math.random() * 60));
         }
         move(getLifeForce() / 20);
+        if(isTouching(Starfish.class)){
+        fight();
+        }
     }
 
     public void reproduce(){

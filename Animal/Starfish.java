@@ -34,12 +34,30 @@ public class Starfish extends Animal
             turn(30 - (int)(Math.random() * 60));
         }
         move(getLifeForce() / 20);
-        
-        if (loser == true) {
-        takeDamage();
+        if(isTouching(Crab.class)){
+        fight();
         }
+       
     }
-
+    public boolean fight(){
+        
+        boolean success = false;
+    
+        if(Math.random() > 0.5) {
+            System.out.println("Starfish's attack is successful!");
+        success = true;
+        Starfish.lose();
+        System.out.println("Crab takes a hit!!");
+        }
+        else {
+        System.out.println("Starfish's attack failed!");
+            
+        }
+    
+   
+    
+    return success;
+    }
     public void reproduce(){
         if(isTouching(Starfish.class) && getLifeForce() > 50){
             World w = getWorld();
