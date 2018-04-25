@@ -31,7 +31,12 @@ public class Player extends Actor
     public void move()
     {
     while (Greenfoot.isKeyDown("left")){
-    
+    turn(90);
+    move();
+    }
+    while (Greenfoot.isKeyDown("right")){
+        turn(-90);
+        move();
     }
     }
     public int getHealth(){

@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Thu Apr 19 09:24:17 ICT 2018
+#Wed Apr 25 09:08:55 ICT 2018
 class.Evil2.superclass=Enemy
 mainWindow.width=850
 class.Evil1.superclass=Enemy
@@ -10,5 +10,6 @@ class.Enemy.superclass=greenfoot.Actor
 class.Player.superclass=greenfoot.Actor
 world.lastInstantiated=MyWorld
 mainWindow.y=40
+class.Player.image=alligator.png
 mainWindow.x=40
 mainWindow.height=600
