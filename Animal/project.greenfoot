@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Thu Apr 19 09:14:58 ICT 2018
+#Thu May 03 14:21:03 ICT 2018
 target4.type=AbstractTarget
 target8.showInterface=false
 class.Cherry.image=cherries.png
@@ -38,11 +38,11 @@ target3.showInterface=false
 target6.name=Starfish
 class.Crab.image=lobster.png
 target7.showInterface=false
-target8.typeParameters=
 target1.showInterface=false
+target8.typeParameters=
 target5.showInterface=false
-target7.type=InterfaceTarget
 target6.width=80
+target7.type=InterfaceTarget
 target6.height=50
 package.numTargets=8
 target8.y=0

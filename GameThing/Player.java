@@ -27,16 +27,18 @@ public class Player extends Actor
     public void act() 
     {
         // Add your action code here.
+        move();
     }   
     public void move()
     {
-    while (Greenfoot.isKeyDown("left")){
-    turn(90);
-    move();
+       
+    while (Greenfoot.isKeyDown("left") ){
+    turnTowards(MyWorld.W * (3/4), MyWorld.H/2);
+    move(1);
     }
     while (Greenfoot.isKeyDown("right")){
-        turn(-90);
-        move();
+        turnTowards(750, 200);
+        move(1);
     }
     }
     public int getHealth(){
