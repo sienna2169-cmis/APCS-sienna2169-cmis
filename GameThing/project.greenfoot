@@ -1,17 +1,19 @@
 #Greenfoot properties
-#Thu May 03 14:35:39 ICT 2018
-simulation.speed=37
+#Mon May 07 09:53:27 ICT 2018
+simulation.speed=53
 class.Evil2.superclass=Enemy
-class.MyWorld.image=bluerock.jpg
+class.Projectile.image=ant.png
 mainWindow.width=850
+class.MyWorld.image=bluerock.jpg
 class.Evil1.superclass=Enemy
 class.MyWorld.superclass=greenfoot.World
 project.charset=UTF-8
 version=3.0.0
 class.Enemy.superclass=greenfoot.Actor
 class.Player.superclass=greenfoot.Actor
+class.Projectile.superclass=greenfoot.Actor
 world.lastInstantiated=MyWorld
 mainWindow.y=40
+class.Player.image=dolphin.png
 mainWindow.x=40
-class.Player.image=ant-with-food.png
 mainWindow.height=600
