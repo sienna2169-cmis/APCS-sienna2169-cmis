@@ -19,9 +19,12 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(W, H, 1); 
+        super(750, 500, 1); 
         setPaintOrder(Player.class, Enemy.class);
         
         addObject(new Player(), (int)(Math.random() * W), (int)(Math.random() * H));
+    }
+    public static int getW(){
+    return W;
     }
 }

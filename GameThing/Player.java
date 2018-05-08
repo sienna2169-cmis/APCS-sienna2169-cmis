@@ -65,20 +65,23 @@ public class Player extends Actor
     
     }
     public void shoot(){
+      
     if (Greenfoot.isKeyDown("a")) {
-    getWorld().addObject(new Projectile(), this.getX() -1, this.getY());
-    
+    getWorld().addObject(new Projectile(180), this.getX() -4, this.getY());
+   
     }
     else if (Greenfoot.isKeyDown("s")) {
-    getWorld().addObject(new Projectile(), this.getX(), this.getY() + 1);
+    getWorld().addObject(new Projectile(90), this.getX(), this.getY() + 4);
+   
     }
     
     else if (Greenfoot.isKeyDown("w")) {
-    getWorld().addObject(new Projectile(), this.getX(), this.getY() -1);
+    
+   getWorld().addObject(new Projectile(-90), this.getX(), this.getY() -4);
    
     }
     else if (Greenfoot.isKeyDown("d")){
-    getWorld().addObject(new Projectile(), this.getX() +1, this.getY());
+    getWorld().addObject(new Projectile(1), this.getX() +4, this.getY());
     }
     }
 }
