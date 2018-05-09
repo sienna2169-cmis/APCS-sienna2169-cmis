@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Tue May 08 10:58:54 ICT 2018
+#Wed May 09 14:23:21 ICT 2018
 target4.type=ClassTarget
 class.Evil2.superclass=Enemy
 dependency3.from=MyWorld
@@ -20,10 +20,11 @@ target5.type=ClassTarget
 target3.typeParameters=
 dependency4.from=MyWorld
 class.Projectile.superclass=greenfoot.Actor
-mainWindow.width=1602
+mainWindow.width=1600
 dependency4.type=UsesDependency
 target2.width=80
 target5.name=Evil1
+class.Display.superclass=greenfoot.Actor
 version=3.0.0
 target6.type=ClassTarget
 dependency1.to=MyWorld
@@ -59,7 +60,7 @@ target2.y=0
 target2.x=0
 class.MyWorld.superclass=greenfoot.World
 mainWindow.y=0
-mainWindow.x=-1
+mainWindow.x=0
 target6.typeParameters=
 dependency1.from=Player
 target5.width=80

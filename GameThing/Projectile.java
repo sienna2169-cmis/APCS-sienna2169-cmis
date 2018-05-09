@@ -17,11 +17,26 @@ public class Projectile extends Actor
 public Projectile(int rotation){
     
     setRotation(rotation);
-    
+
     }
     public void act() 
     {
-        move(4);
+        move(6);
+       if (this.getX() == 749 ){
+        getWorld().removeObject(this);
+        }
+        else if (this.getX() == 0) {
+        getWorld().removeObject(this);
+        }
+        else if (this.getY() == 0) {
+        getWorld().removeObject(this);
+        }
+        else if (this.getY() == 499) {
+        getWorld().removeObject(this);
+        }
+       // if (this.getY() == 0 || this.getY() == 500) {
+       // getWorld().removeObject(this);
+       // }
       /*  if (Greenfoot.isKeyDown("a")) {
    turnTowards(this.getX() -1, this.getY());
     }
@@ -34,6 +49,6 @@ public Projectile(int rotation){
     }
     
     }    */
-  
+    
 }
 }
