@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Fri May 11 09:26:44 ICT 2018
+#Fri May 11 09:46:43 ICT 2018
 target4.type=ClassTarget
 class.Evil2.superclass=Enemy
 dependency3.from=MyWorld
@@ -26,6 +26,7 @@ target2.width=80
 target5.name=Evil1
 class.Display.superclass=greenfoot.Actor
 class.Enemy.image=seahorse.png
+class.Powerup.image=bread.png
 version=3.0.0
 target6.type=ClassTarget
 dependency1.to=MyWorld

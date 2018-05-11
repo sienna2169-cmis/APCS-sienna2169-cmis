@@ -25,6 +25,9 @@ public class MyWorld extends World
         addObject(new Player(), (int)(Math.random() * W), (int)(Math.random() * H));
         addObject(new Evil2(), (int)(Math.random()*W), (int)(Math.random()*H));
         addObject(new Enemy(), (int)(Math.random()*W), (int)(Math.random()*H));
+        if (Math.random() > 0.25){
+        addObject(new Powerup(), (int)(Math.random()*W), (int)(Math.random()*H));
+        }
     }
     public static int getW(){
     return W;

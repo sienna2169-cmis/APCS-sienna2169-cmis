@@ -16,6 +16,7 @@ public class Player extends Actor
     int charge = 20;
     int antmo = 20;
     boolean isReloading = false;
+    boolean poweredUp = false;
     /**
      * Act - do whatever the Player wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -49,8 +50,42 @@ public class Player extends Actor
         if (getHealth() == 0){
         die();
         }
+        
+        if (this.isTouching(Powerup.class)){
+        powerUP();
+        }
+        if (isBoosted() == true) {
+        //makes it so that it uses shoot2 for set amount of time
+        
+        }
+        
     }   
+    public void powerUP(){
+    this.poweredUp = true;
+    }
+    public boolean isBoosted(){
+    return this.poweredUp;
+    }
+    public void shootBOOST(){
+      if (Greenfoot.isKeyDown("left")) {
+                getWorld().addObject(new Projectile(180), this.getX() -4, this.getY());
+                
+            }
+            else if (Greenfoot.isKeyDown("down")) {
+                getWorld().addObject(new Projectile(90), this.getX(), this.getY() + 4);
+                
+            }
 
+            else if (Greenfoot.isKeyDown("up")) {
+
+                getWorld().addObject(new Projectile(-90), this.getX(), this.getY() -4);
+                
+            }
+            else if (Greenfoot.isKeyDown("right")){
+                getWorld().addObject(new Projectile(1), this.getX() +4, this.getY());
+                
+            }
+    }
     public void move()
     {
 
