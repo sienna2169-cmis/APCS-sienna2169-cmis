@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Wed May 09 14:23:21 ICT 2018
+#Fri May 11 09:26:44 ICT 2018
 target4.type=ClassTarget
 class.Evil2.superclass=Enemy
 dependency3.from=MyWorld
@@ -25,6 +25,7 @@ dependency4.type=UsesDependency
 target2.width=80
 target5.name=Evil1
 class.Display.superclass=greenfoot.Actor
+class.Enemy.image=seahorse.png
 version=3.0.0
 target6.type=ClassTarget
 dependency1.to=MyWorld
@@ -70,22 +71,23 @@ target1.x=0
 dependency1.type=UsesDependency
 readme.height=58
 class.Projectile.image=ant.png
-target2.name=Enemy
 readme.name=@README
+target2.name=Enemy
 class.Evil1.superclass=Enemy
-simulation.speed=53
 package.numDependencies=4
+simulation.speed=53
 target3.type=ClassTarget
 target4.width=80
 dependency2.from=Player
 dependency2.type=UsesDependency
+class.Powerup.superclass=greenfoot.Actor
 target5.typeParameters=
 world.lastInstantiated=MyWorld
-target2.showInterface=false
 mainWindow.height=873
+target2.showInterface=false
 target3.name=Evil2
 target6.showInterface=false
-class.MyWorld.image=bluerock.jpg
-target3.width=80
 project.charset=UTF-8
+target3.width=80
+class.MyWorld.image=bluerock.jpg
 target4.showInterface=false

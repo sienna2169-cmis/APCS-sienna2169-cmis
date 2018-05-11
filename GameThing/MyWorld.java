@@ -23,6 +23,8 @@ public class MyWorld extends World
         setPaintOrder(Player.class, Enemy.class);
         
         addObject(new Player(), (int)(Math.random() * W), (int)(Math.random() * H));
+        addObject(new Evil2(), (int)(Math.random()*W), (int)(Math.random()*H));
+        addObject(new Enemy(), (int)(Math.random()*W), (int)(Math.random()*H));
     }
     public static int getW(){
     return W;

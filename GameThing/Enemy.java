@@ -15,6 +15,7 @@ public class Enemy extends Actor
     private int health;
     private int damage;
     private int speed;
+    private boolean alive = true;
     public Enemy() {
     health = 100;
     damage = 5;
@@ -22,12 +23,30 @@ public class Enemy extends Actor
     }
     public void act() 
     {
-        // Add your action code here.
+       if(!getWorld().getObjects(Player.class).isEmpty()){
+       move();
+       
+       die();}
+       else{
+        
+        }
     }    
+    public void move(){
+        Player target = (Player)getWorld().getObjects(Player.class).get(0);
+        turnTowards(target.getX(), target.getY());
+        move(1);
+    }
     public void attack() {
     
     }
     public void setSpeed(int speed) {
     this.speed = speed;
+    }
+    public boolean die(){
+    if (this.isTouching(Projectile.class)){
+    alive = false;
+    getWorld().removeObject(this);
+    }
+    return alive;
     }
 }

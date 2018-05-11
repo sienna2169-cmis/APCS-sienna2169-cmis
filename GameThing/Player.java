@@ -14,7 +14,7 @@ public class Player extends Actor
     private int speed;
     private boolean alive = true;
     int charge = 20;
-    int antmo = 150;
+    int antmo = 20;
     boolean isReloading = false;
     /**
      * Act - do whatever the Player wants to do. This method is called whenever
@@ -30,11 +30,15 @@ public class Player extends Actor
     public int getAmmo(){
     return this.antmo;
     }
+    public void setHealth(int newHealth){
+    this.health = newHealth;
+    }
     public void act() 
     {
         // Add your action code here.
 
         move();
+        takeDamage();
         if (antmo > 0) {
         shoot();
     }
@@ -42,24 +46,27 @@ public class Player extends Actor
         reload();
         this.isReloading = false;
         }
+        if (getHealth() == 0){
+        die();
+        }
     }   
 
     public void move()
     {
 
-        if (Greenfoot.isKeyDown("left") ){
+        if (Greenfoot.isKeyDown("a") ){
             turnTowards(this.getX() -1, this.getY());
             move(speed);
         }
-        if (Greenfoot.isKeyDown("right")){
+        if (Greenfoot.isKeyDown("d")){
             turnTowards(this.getX() + 1, this.getY());
             move(speed);
         }
-        if (Greenfoot.isKeyDown("up")){
+        if (Greenfoot.isKeyDown("w")){
             turnTowards(this.getX(), this.getY() -1);
             move(speed);
         }
-        if (Greenfoot.isKeyDown("down")) {
+        if (Greenfoot.isKeyDown("s")) {
             turnTowards(this.getX(), this.getY() +1);
             move(speed);
         }
@@ -84,33 +91,39 @@ public class Player extends Actor
     {
         turn(30);
         setLife(false);
-
+        getWorld().removeObject(this);
     }
     
+    public void takeDamage(){
+    if(this.isTouching(Enemy.class)){
+    setHealth(getHealth()-25);
+    }
+    
+    }
     public void shoot(){
 
         if (charge < 20){
             charge +=1;
         }
         if (charge == 20 && ammo > 0){
-            if (Greenfoot.isKeyDown("a")) {
+            if (Greenfoot.isKeyDown("left")) {
                 getWorld().addObject(new Projectile(180), this.getX() -4, this.getY());
                 charge = 0;
                 antmo--;
             }
-            else if (Greenfoot.isKeyDown("s")) {
+            else if (Greenfoot.isKeyDown("down")) {
                 getWorld().addObject(new Projectile(90), this.getX(), this.getY() + 4);
                 charge = 0;
                 antmo--;
             }
 
-            else if (Greenfoot.isKeyDown("w")) {
+            else if (Greenfoot.isKeyDown("up")) {
 
                 getWorld().addObject(new Projectile(-90), this.getX(), this.getY() -4);
                 charge = 0;
                 antmo--;
             }
-            else if (Greenfoot.isKeyDown("d")){
+            else if (Greenfoot.isKeyDown("right")){
                 getWorld().addObject(new Projectile(1), this.getX() +4, this.getY());
                 charge = 0;
                 antmo--;
