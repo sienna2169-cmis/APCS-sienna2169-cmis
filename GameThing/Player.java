@@ -26,7 +26,7 @@ public class Player extends Actor
         health = 200;
         damage = 10;
         ammo = 150;
-        speed = 3;
+        speed = 5;
     }
     public int getAmmo(){
     return this.antmo;
