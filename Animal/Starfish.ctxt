@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Starfish
+comment1.params=food
+comment1.target=boolean\ eat(greenfoot.Actor)
+comment2.params=
+comment2.target=void\ takeDamage()
+comment3.params=
+comment3.target=void\ lose()
+comment4.params=
+comment4.target=void\ changePosition()
+comment5.params=
+comment5.target=boolean\ fight()
+comment6.params=
+comment6.target=void\ reproduce()
+numComments=7

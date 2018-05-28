@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=DLP
+comment0.text=\n\ Write\ a\ description\ of\ class\ DLP\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=DLP()
+comment2.params=modelName\ initialPrice
+comment2.target=DLP(java.lang.String,\ double)
+numComments=3

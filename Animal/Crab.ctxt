@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Crab
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Crab\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=food
+comment1.target=boolean\ eat(greenfoot.Actor)
+comment2.params=
+comment2.target=void\ lose()
+comment3.params=
+comment3.target=boolean\ fight()
+comment4.params=
+comment4.target=void\ changePosition()
+comment5.params=
+comment5.target=void\ reproduce()
+numComments=6

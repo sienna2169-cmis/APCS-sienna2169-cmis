@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Teacher
+comment0.text=\n\ Write\ a\ description\ of\ class\ Teacher\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=name\ smarts
+comment1.target=Teacher(java.lang.String,\ double)
+comment2.params=worker
+comment2.target=boolean\ instructWorkout(ConstructionWorker)
+comment3.params=food
+comment3.target=boolean\ eat(java.lang.String)
+comment4.params=dx\ dy
+comment4.target=boolean\ move(int,\ int)
+numComments=5

@@ -44,9 +44,15 @@ dependency8.type=UsesDependency
 dependency9.from=ClockStore
 dependency9.to=Clock
 dependency9.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=1047
 editor.fx.0.width=974
 editor.fx.0.x=953
+=======
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+>>>>>>> a94a951484bbdff806a440de3fbefc64c2eb6e43
 editor.fx.0.y=0
 objectbench.height=92
 objectbench.width=760
@@ -58,7 +64,11 @@ package.editor.x=110
 package.editor.y=119
 package.frame.height=600
 package.frame.width=800
+<<<<<<< HEAD
 package.numDependencies=15
+=======
+package.numDependencies=9
+>>>>>>> a94a951484bbdff806a440de3fbefc64c2eb6e43
 package.numTargets=26
 package.showExtends=true
 package.showUses=true
@@ -90,16 +100,26 @@ target11.showInterface=false
 target11.type=ClassTarget
 target11.typeParameters=
 target11.width=80
+<<<<<<< HEAD
 target11.x=10
 target11.y=250
+=======
+target11.x=190
+target11.y=290
+>>>>>>> a94a951484bbdff806a440de3fbefc64c2eb6e43
 target12.height=50
 target12.name=Roster2
 target12.showInterface=false
 target12.type=ClassTarget
 target12.typeParameters=
 target12.width=80
+<<<<<<< HEAD
 target12.x=840
 target12.y=390
+=======
+target12.x=10
+target12.y=310
+>>>>>>> a94a951484bbdff806a440de3fbefc64c2eb6e43
 target13.height=50
 target13.name=MyPodDriver
 target13.showInterface=false
@@ -113,14 +133,21 @@ target14.name=RosterDriver
 target14.showInterface=false
 target14.type=ClassTarget
 target14.typeParameters=
+<<<<<<< HEAD
 target14.width=100
 target14.x=190
 target14.y=290
+=======
+target14.width=110
+target14.x=100
+target14.y=350
+>>>>>>> a94a951484bbdff806a440de3fbefc64c2eb6e43
 target15.height=50
 target15.name=SongDriver
 target15.showInterface=false
 target15.type=ClassTarget
 target15.typeParameters=
+<<<<<<< HEAD
 target15.width=90
 target15.x=244
 target15.y=66
@@ -140,6 +167,27 @@ target17.typeParameters=
 target17.width=80
 target17.x=90
 target17.y=380
+=======
+target15.width=100
+target15.x=244
+target15.y=66
+target16.height=50
+target16.name=myFamily
+target16.showInterface=false
+target16.type=ClassTarget
+target16.typeParameters=
+target16.width=90
+target16.x=510
+target16.y=220
+target17.height=50
+target17.name=Password
+target17.showInterface=false
+target17.type=ClassTarget
+target17.typeParameters=
+target17.width=90
+target17.x=900
+target17.y=190
+>>>>>>> a94a951484bbdff806a440de3fbefc64c2eb6e43
 target18.height=60
 target18.name=CardDriver
 target18.showInterface=false
@@ -161,15 +209,24 @@ target2.name=Flashlight
 target2.showInterface=false
 target2.type=ClassTarget
 target2.typeParameters=
+<<<<<<< HEAD
 target2.width=80
 target2.x=100
+=======
+target2.width=90
+target2.x=120
+>>>>>>> a94a951484bbdff806a440de3fbefc64c2eb6e43
 target2.y=10
 target20.height=50
 target20.name=StudentDriver
 target20.showInterface=false
 target20.type=ClassTarget
 target20.typeParameters=
+<<<<<<< HEAD
 target20.width=110
+=======
+target20.width=120
+>>>>>>> a94a951484bbdff806a440de3fbefc64c2eb6e43
 target20.x=110
 target20.y=130
 target21.height=50
@@ -178,8 +235,13 @@ target21.showInterface=false
 target21.type=ClassTarget
 target21.typeParameters=
 target21.width=110
+<<<<<<< HEAD
 target21.x=580
 target21.y=250
+=======
+target21.x=0
+target21.y=460
+>>>>>>> a94a951484bbdff806a440de3fbefc64c2eb6e43
 target22.height=50
 target22.name=MyPod
 target22.showInterface=false
@@ -194,8 +256,13 @@ target23.showInterface=false
 target23.type=ClassTarget
 target23.typeParameters=
 target23.width=80
+<<<<<<< HEAD
 target23.x=10
 target23.y=190
+=======
+target23.x=0
+target23.y=390
+>>>>>>> a94a951484bbdff806a440de3fbefc64c2eb6e43
 target24.height=60
 target24.name=Card
 target24.showInterface=false
@@ -221,6 +288,7 @@ target26.width=100
 target26.x=440
 target26.y=320
 target3.height=50
+<<<<<<< HEAD
 target3.name=BreadDriver
 target3.showInterface=false
 target3.type=ClassTarget
@@ -236,14 +304,36 @@ target4.typeParameters=
 target4.width=80
 target4.x=263
 target4.y=223
+=======
+target3.name=Clock
+target3.showInterface=false
+target3.type=ClassTarget
+target3.typeParameters=
+target3.width=80
+target3.x=263
+target3.y=223
+target4.height=50
+target4.name=BreadDriver
+target4.showInterface=false
+target4.type=ClassTarget
+target4.typeParameters=
+target4.width=100
+target4.x=100
+target4.y=190
+>>>>>>> a94a951484bbdff806a440de3fbefc64c2eb6e43
 target5.height=50
 target5.name=MyPod2
 target5.showInterface=false
 target5.type=ClassTarget
 target5.typeParameters=
 target5.width=80
+<<<<<<< HEAD
 target5.x=706
 target5.y=146
+=======
+target5.x=10
+target5.y=250
+>>>>>>> a94a951484bbdff806a440de3fbefc64c2eb6e43
 target6.height=50
 target6.name=Bread
 target6.showInterface=false
@@ -253,6 +343,7 @@ target6.width=80
 target6.x=100
 target6.y=250
 target7.height=50
+<<<<<<< HEAD
 target7.name=Crab
 target7.showInterface=false
 target7.type=ClassTarget
@@ -268,6 +359,23 @@ target8.typeParameters=
 target8.width=90
 target8.x=10
 target8.y=130
+=======
+target7.name=CrabDriver
+target7.showInterface=false
+target7.type=ClassTarget
+target7.typeParameters=
+target7.width=90
+target7.x=10
+target7.y=130
+target8.height=50
+target8.name=Crab
+target8.showInterface=false
+target8.type=ClassTarget
+target8.typeParameters=
+target8.width=80
+target8.x=310
+target8.y=490
+>>>>>>> a94a951484bbdff806a440de3fbefc64c2eb6e43
 target9.height=50
 target9.name=Song
 target9.showInterface=false
