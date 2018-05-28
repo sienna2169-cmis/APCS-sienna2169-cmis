@@ -8,8 +8,11 @@ import java.util.List;
  */
 public class ImageScrollWorld extends World
 {
-    public static final int WIDTH = 800;
-    public static final int HEIGHT = 600;
+    private static final int WIDTH = 800;
+    private static final int HEIGHT = 600;
+    private int margin;
+    private Background[] bg = new Background[3];
+
     public static final int constantY = HEIGHT / 4;
     int totalXMovement = 0;
     protected GreenfootImage textur;
@@ -17,66 +20,78 @@ public class ImageScrollWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
+
+    
     public ImageScrollWorld()
     {    
 
         // creates a world thats 800 by 600 pixels, unbounded
         super(WIDTH, HEIGHT, 1, false); 
+       
         GreenfootImage background = new GreenfootImage("finalbackground.png");
-        setBackground(background);
+       // setBackground(background);
+        constructBG();
         ScrollActor obj = new ScrollActor();
         obj.getImage().scale(80,80);
         addObject(obj, WIDTH/2, HEIGHT - HEIGHT/3);
-        
     }
-
+    public void constructBG(){
+    int x = -400;
+    for (int i = 0; i<bg.length; i++){
+    bg[i] = new Background();
+    addObject(bg[i], x, getHeight()/2);
+    x = x+800;
+    }
+    
+    }
+    /*
     public static int getConstantY(){
-        return constantY;
+    return constantY;
     }
 
     public final void keepInPlace(ScrollActor actor){
-        int xMovement = (int) ((double) getWidth()/4 - actor.getExactX());
-        totalXMovement += xMovement;
-        List<Actor> actors = getObjects(Actor.class);
-        for (Actor act : actors) {
-            if (act instanceof ScrollActor){
-                ((ScrollActor) act).setLocation(act.getX() + xMovement, constantY);
-            }
+    int xMovement = (int) ((double) getWidth()/4 - actor.getExactX());
+    totalXMovement += xMovement;
+    List<Actor> actors = getObjects(Actor.class);
+    for (Actor act : actors) {
+    if (act instanceof ScrollActor){
+    ((ScrollActor) act).setLocation(act.getX() + xMovement, constantY);
+    }
 
-        }
-        createTextur();
+    }
+    createTextur();
     }
 
     public void act(){
-        
+
     }
 
     protected final void createTextur() {
-        int x;
-        int y;
-        if (totalXMovement > 0) {
-            for (x = totalXMovement; x > 0; x -= textur.getWidth()) {
-                ;
-            }
-        }
-        else {
-            for (x = totalXMovement; x < 0; x += textur.getWidth()) {
-                ;
-            }
-            x -= textur.getWidth();
-        }
+    int x;
+    int y;
+    if (totalXMovement > 0) {
+    for (x = totalXMovement; x > 0; x -= textur.getWidth()) {
+    ;
+    }
+    }
+    else {
+    for (x = totalXMovement; x < 0; x += textur.getWidth()) {
+    ;
+    }
+    x -= textur.getWidth();
+    }
 
-        getBackground().clear();
-        for (int i = x; i < getWidth(); i += textur.getWidth()) {
+    getBackground().clear();
+    for (int i = x; i < getWidth(); i += textur.getWidth()) {
 
-            getBackground().drawImage(textur, i, constantY);
+    getBackground().drawImage(textur, i, constantY);
 
-        }
+    }
     }
 
     public void setScrollingBackground(GreenfootImage bgImage) {
-        textur = bgImage;
+    textur = bgImage;
     }   
 
-    
+     */ 
 }
