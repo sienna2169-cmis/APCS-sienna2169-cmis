@@ -48,6 +48,12 @@ public class Player extends Interactive
             reload();
             this.isReloading = false;
         }
+        if (this.isTouching(Enemy.class)){
+        this.health = 0;
+        getWorld().removeObject(this);
+        Greenfoot.stop();
+        
+        }
     }    
     public boolean atBorder(){
     
