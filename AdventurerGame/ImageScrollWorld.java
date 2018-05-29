@@ -11,11 +11,13 @@ public class ImageScrollWorld extends World
     private static final int WIDTH = 800;
     private static final int HEIGHT = 600;
     private int margin;
-    private Background[] bg = new Background[3];
-
+   // private Background[] bg = new Background[3];
+    private int scrollWidth;
+    private int scrollHeight;
     public static final int constantY = HEIGHT / 4;
     int totalXMovement = 0;
-    protected GreenfootImage textur;
+    protected GreenfootImage textur = new GreenfootImage("finalbackground.png");
+    boolean atEdge;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -30,18 +32,65 @@ public class ImageScrollWorld extends World
        
         GreenfootImage background = new GreenfootImage("finalbackground.png");
        // setBackground(background);
-        constructBG();
+        
         ScrollActor obj = new ScrollActor();
         obj.getImage().scale(80,80);
-        addObject(obj, WIDTH/2, HEIGHT - HEIGHT/3);
+        addObject(obj, WIDTH/3, HEIGHT - HEIGHT/3);
+              // resetPlayersPosition(obj);
+              isAtEdge(obj);
+        scrollingBg();
     }
-    public void constructBG(){
+    public void act(){
+    
+    }
+ /*   public void constructBG(){
     int x = -400;
     for (int i = 0; i<bg.length; i++){
     bg[i] = new Background();
     addObject(bg[i], x, getHeight()/2);
     x = x+800;
     }
+    
+    }*/
+    
+      public final void resetPlayersPosition(ScrollActor scrollingActor) {
+        int xMovement = (int) ((double) 400 - scrollingActor.getExactX());
+       // int yMovement = (int) ((double) getHeight()/2 - scrollingActor.getExactY());
+        totalXMovement += xMovement;
+       // totalYMovement += yMovement;
+        List<Actor> actors = getObjects(Actor.class);
+        for (Actor actor : actors) {
+            if (actor instanceof ScrollActor) {
+                ((ScrollActor) actor).setLocation(actor.getX() - 20, HEIGHT - HEIGHT/3);
+            }
+            
+            else {
+                actor.setLocation(actor.getX() + xMovement, HEIGHT);
+            }
+        }
+    }
+    public void isAtEdge(ScrollActor actor){
+    if(actor.getX() == scrollWidth +1){
+    actor.setLocation(scrollWidth, actor.getY());
+    this.atEdge = true;
+    
+    }
+    else {
+    this.atEdge = false;
+    }
+    }
+    
+    public void scrollingBg(){
+        int count = 0;
+    while (this.atEdge == true){
+        count++;
+    
+    }
+    for(int x = 1; x < count +1; x++){
+    
+    getBackground().drawImage(textur, x, HEIGHT);
+    }
+    
     
     }
     /*

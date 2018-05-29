@@ -5,5 +5,12 @@ comment1.params=
 comment1.target=ImageScrollWorld()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ MyWorld.\r\n\ \r\n
 comment2.params=
-comment2.target=void\ constructBG()
-numComments=3
+comment2.target=void\ act()
+comment3.params=scrollingActor
+comment3.target=void\ resetPlayersPosition(ScrollActor)
+comment3.text=\ \ \ public\ void\ constructBG(){\r\n\ \ \ \ int\ x\ \=\ -400;\r\n\ \ \ \ for\ (int\ i\ \=\ 0;\ i<bg.length;\ i++){\r\n\ \ \ \ bg[i]\ \=\ new\ Background();\r\n\ \ \ \ addObject(bg[i],\ x,\ getHeight()/2);\r\n\ \ \ \ x\ \=\ x+800;\r\n\ \ \ \ }\r\n\ \ \ \ \r\n}
+comment4.params=actor
+comment4.target=void\ isAtEdge(ScrollActor)
+comment5.params=
+comment5.target=void\ scrollingBg()
+numComments=6
