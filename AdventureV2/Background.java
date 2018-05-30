@@ -20,7 +20,7 @@ public class Background extends NonInteractive
     if (getX() < -(getImage().getWidth()/2)){
     setLocation(getWorld().getWidth() + 395, getY());
     }
-    setLocation(getX() - 2, getY());
+    setLocation(getX() - 5, getY());
     }
    
 }

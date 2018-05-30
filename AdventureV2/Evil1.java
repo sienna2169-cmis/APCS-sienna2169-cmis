@@ -9,13 +9,21 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Evil1 extends Enemy implements Monsterable
 {
     private int health = 100;
+     
+    
     /**
      * Act - do whatever the Evil1 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public Evil1(){
+    
+        GreenfootImage image = getImage();
+        image.scale(50, 50);
+        setImage(image);
+    }
     public void act() 
     {
-        getImage().scale(50,50);
+        
         // Add your action code here.
         movement();
         if (isTouching(Projectile.class)){
@@ -27,11 +35,7 @@ public class Evil1 extends Enemy implements Monsterable
         }
     }    
     public void movement(){
-        Player target = (Player)getWorld().getObjects(Player.class).get(0);
-        turnTowards(target.getX(), target.getY());
-        move(2);
-        
-        
+     move(-2);
     }
     public void takeDamage(){
     this.health -= 100;

@@ -17,6 +17,7 @@ public class Player extends Interactive
     boolean isReloading = false;
     private boolean isAtBorder = false;
     private boolean isAtBack = false;
+    private boolean onGround = true;
     /**
      * Act - do whatever the Player wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -24,7 +25,9 @@ public class Player extends Interactive
     
     public Player(){
     health = 100;
-    
+     GreenfootImage image = getImage();
+        image.scale(50, 50);
+        setImage(image);
     }
     public void act() 
     {
@@ -48,6 +51,12 @@ public class Player extends Interactive
             reload();
             this.isReloading = false;
         }
+        
+        jump();
+        if (onGround != true){
+        fall();
+        }
+        
         if (this.isTouching(Enemy.class)){
         this.health = 0;
         getWorld().removeObject(this);
@@ -60,9 +69,25 @@ public class Player extends Interactive
     return this.isAtBorder;
     }
    
-  
+    public void jump(){
+    if (Greenfoot.isKeyDown("w") && onGround == true){
+    
+   
+   setLocation(getX(), getWorld().getHeight()/3);
+   onGround = false;
+   
+}
+    if(getY() == ((MyWorld)getWorld()).getSetHeight()){
+    onGround = true;
+    }
+    
+    }
+    public void fall(){
+        
+    setLocation(getX(), getY() + 5);
+    }
 
-    public double getExactX(){
+   public double getExactX(){
         return exactX;
     }
 
@@ -84,7 +109,7 @@ public class Player extends Interactive
             //turn(180);
             turnTowards(getX() -1, getY());
 
-            move(2);
+            move(3);
             setRotation(0);
         }
 

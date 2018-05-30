@@ -13,10 +13,17 @@ public class Evil2 extends Enemy implements Monsterable
      * Act - do whatever the Evil2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public Evil2(){
+    
+     GreenfootImage image = getImage();
+        image.scale(80, 80);
+        setImage(image);
+    }
+    
+    
     public void act() 
     {
-        getImage().scale(80,80);
-        movement();
+        
          if (isTouching(Projectile.class)){
         takeDamage();
         getWorld().removeObject(getOneIntersectingObject(Projectile.class));
@@ -27,10 +34,8 @@ public class Evil2 extends Enemy implements Monsterable
         // Add your action code here.
     }    
     public void movement(){
-     Player target = (Player)getWorld().getObjects(Player.class).get(0);
-        turnTowards(target.getX(), target.getY());
-        move(1);
-    }
+    move(-1);
+}
     
     public void takeDamage(){
     this.health -= 70;
